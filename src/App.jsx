@@ -283,6 +283,7 @@ export default function App() {
   const wSum = weights.consumi + weights.costo + weights.sicurezza + weights.tech + weights.bagagliaio;
 
   const maxLen = Math.max(...MODELS.map((m) => m.lunghezza), assumptions.lengthLimit) + 0.15;
+  const limitPercent = (assumptions.lengthLimit / maxLen) * 100;
   const rulerModels = useMemo(() => [...MODELS].sort((a, b) => a.lunghezza - b.lunghezza), []);
 
   return (
@@ -307,7 +308,14 @@ export default function App() {
                 </div>
               ))}
               <div style={{ ...S.limitLine, left: `${(assumptions.lengthLimit / maxLen) * 100}%` }}>
-                <span style={S.limitLabel}>IL TUO GARAGE — {assumptions.lengthLimit.toFixed(2)}m</span>
+                <span style={{
+                  ...S.limitLabel,
+                  ...(limitPercent > 60
+                    ? { left: "auto", right: 6, textAlign: "right" }
+                    : { left: 6, right: "auto", textAlign: "left" }),
+                }}>
+                  IL TUO GARAGE — {assumptions.lengthLimit.toFixed(2)}m
+                </span>
               </div>
             </div>
 
@@ -888,7 +896,7 @@ const S = {
   limitLine: { position: "absolute", top: -6, height: 30, borderLeft: `2px dashed ${C.accent}`, zIndex: 1 },
   limitLabel: { position: "absolute", top: -32, left: 6, fontFamily: "'JetBrains Mono', monospace", fontSize: 10, fontWeight: 600, color: C.accent, whiteSpace: "nowrap" },
   limitLineThin: { position: "absolute", top: -2, bottom: -2, borderLeft: `1.5px dashed ${C.accent}`, opacity: 0.6 },
-  rulerRow: { display: "grid", gridTemplateColumns: "200px 1fr 90px", alignItems: "center", gap: 10, height: 26 },
+  rulerRow: { display: "grid", gridTemplateColumns: "minmax(90px, 160px) 1fr minmax(58px, 80px)", alignItems: "center", gap: 8, height: 26 },
   rulerName: { fontSize: 12.5, color: C.textSecondary, overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" },
   rulerTrack: { position: "relative", height: 14, background: C.panelAlt, borderRadius: 3, overflow: "visible" },
   rulerBar: { position: "absolute", top: 0, bottom: 0, left: 0, borderRadius: 3, transition: "width .3s" },
