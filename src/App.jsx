@@ -25,12 +25,13 @@ const MODELS = [
   },
   {
     id: "mg3", nome: "MG3 Hybrid+", gruppo: "Full hybrid",
-    prezzo: 19000, wltp: 22.7, kw: 100, lunghezza: 4.11, bagagliaio: 293, bagagliaioMax: 983,
+    prezzo: 15500, wltp: 22.7, kw: 100, lunghezza: 4.11, bagagliaio: 293, bagagliaioMax: 983,
     manutenzione: 220, tech: 6, valoreResiduoPct: 0.25, scarto: 0.10,
     ncapStelle: 4, ncapAnno: 2025,
     garanzia: "7 anni/150.000km — tra le più lunghe del mercato.",
     allerta: "Cedimento del meccanismo di aggancio del sedile guidatore riscontrato nel crash test Euro NCAP di settembre 2025 — mai osservato prima in 28 anni di test. Richiamo UK per ~2.000 veicoli (gen. 2026, immatricolati apr.2024–ago.2025). Verifica il VIN prima di acquistare.",
-    annuncio: { fonte: "De Bona Motors, Padova (km0)", prezzo: "18.490€", url: "https://www.debona.it" },
+    nota: "Prezzo aggiornato al 20/08/2026: trovati annunci Hybrid+ Luxury a 14.900-15.450€ (16-20.000km, 2025-2026), più bassi del km0 di fine luglio. Attenzione: alcuni annunci per questa versione mostrano 143kW (194CV) invece dei 100kW qui modellati — verifica la potenza esatta sul libretto prima di calcolare il bollo, la differenza cambia l'importo.",
+    annuncio: { fonte: "AutoScout24, varie sedi (Hybrid+ Luxury)", prezzo: "14.900–15.450€", url: "https://www.autoscout24.it/lst/mg/mg3" },
   },
   {
     id: "captur", nome: "Renault Captur E-Tech Full Hybrid", gruppo: "Full hybrid",
@@ -43,12 +44,12 @@ const MODELS = [
   },
   {
     id: "puma", nome: "Ford Puma EcoBoost Hybrid (automatico)", gruppo: "Mild hybrid",
-    prezzo: 22500, wltp: 20.4, kw: 92, lunghezza: 4.19, bagagliaio: 456, bagagliaioMax: 1216,
+    prezzo: 18500, wltp: 20.4, kw: 92, lunghezza: 4.19, bagagliaio: 456, bagagliaioMax: 1216,
     manutenzione: 280, tech: 7, valoreResiduoPct: 0.38, scarto: 0.20,
     ncapStelle: 5, ncapAnno: 2019,
     garanzia: "3 anni/100.000km (2+1).",
-    nota: "Bagagliaio più capiente della lista: 456L + 80L vano MegaBox.",
-    annuncio: { fonte: "alVolante, provincia di Padova", prezzo: "da 22.300€ (automatico)", url: "https://annunci.alvolante.it/auto-usate/ford-puma-provincia-padova" },
+    nota: "Bagagliaio più capiente della lista: 456L + 80L vano MegaBox. Prezzo aggiornato al 20/08/2026 con annunci automatico ST-Line X confermati in zona Padova (Selvazzano Dentro, Piombino Dese).",
+    annuncio: { fonte: "AutoUncle/AutoScout24, zona Padova (ST-Line X 125CV automatico)", prezzo: "18.400–18.500€", url: "https://www.autouncle.it/it/auto-usate/Ford/Puma/in/Veneto/Padua" },
   },
   {
     id: "vitara", nome: "Suzuki Vitara Full Hybrid (automatico)", gruppo: "Full hybrid",
@@ -797,7 +798,7 @@ function ModelCard({ m, rank, expanded, onToggle, insurance, saveInsurance, assu
               <span>{m.allerta}</span>
             </div>
           )}
-          {m.nota && !m.allerta && (
+          {m.nota && (
             <div style={S.noteBox}>
               <Info size={14} color={C.accent} style={{ flexShrink: 0, marginTop: 2 }} />
               <span>{m.nota}</span>
