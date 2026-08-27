@@ -17,7 +17,12 @@ import {
 const MODELS = [
   {
     id: "yaris-cross", nome: "Toyota Yaris Cross Hybrid", gruppo: "Full hybrid",
-    prezzo: 24000, wltp: 26.0, kw: 85, lunghezza: 4.18, bagagliaio: 397, bagagliaioMax: 1097,
+    allestimenti: [
+      { nome: "Business", prezzo: 20800 },
+      { nome: "Trend", prezzo: 22900 },
+      { nome: "GR Sport", prezzo: 24400 },
+    ],
+    wltp: 26.0, kw: 85, lunghezza: 4.18, bagagliaio: 397, bagagliaioMax: 1097,
     manutenzione: 275, tech: 8, valoreResiduoPct: 0.45, scarto: 0.10,
     ncapStelle: 4, ncapAnno: 2025,
     garanzia: "3 anni/100.000km, estensibile a 5 con tagliandi Toyota. Batteria ibrida: 10 anni con controllo annuale.",
@@ -25,43 +30,60 @@ const MODELS = [
   },
   {
     id: "mg3", nome: "MG3 Hybrid+", gruppo: "Full hybrid",
-    prezzo: 15500, wltp: 22.7, kw: 100, lunghezza: 4.11, bagagliaio: 293, bagagliaioMax: 983,
+    allestimenti: [
+      { nome: "Luxury (usato, 16-20.000km)", prezzo: 15450 },
+      { nome: "Comfort (km0)", prezzo: 18490 },
+    ],
+    wltp: 22.7, kw: 100, lunghezza: 4.11, bagagliaio: 293, bagagliaioMax: 983,
     manutenzione: 220, tech: 6, valoreResiduoPct: 0.25, scarto: 0.10,
     ncapStelle: 4, ncapAnno: 2025,
     garanzia: "7 anni/150.000km — tra le più lunghe del mercato.",
     allerta: "Cedimento del meccanismo di aggancio del sedile guidatore riscontrato nel crash test Euro NCAP di settembre 2025 — mai osservato prima in 28 anni di test. Richiamo UK per ~2.000 veicoli (gen. 2026, immatricolati apr.2024–ago.2025). Verifica il VIN prima di acquistare.",
-    nota: "Prezzo aggiornato al 20/08/2026: trovati annunci Hybrid+ Luxury a 14.900-15.450€ (16-20.000km, 2025-2026), più bassi del km0 di fine luglio. Attenzione: alcuni annunci per questa versione mostrano 143kW (194CV) invece dei 100kW qui modellati — verifica la potenza esatta sul libretto prima di calcolare il bollo, la differenza cambia l'importo.",
-    annuncio: { fonte: "AutoScout24, varie sedi (Hybrid+ Luxury)", prezzo: "14.900–15.450€", url: "https://www.autoscout24.it/lst/mg/mg3" },
+    nota: "Attenzione: alcuni annunci Luxury mostrano 143kW (194CV) invece dei 100kW qui modellati — verifica la potenza esatta sul libretto prima di calcolare il bollo, la differenza cambia l'importo.",
+    annuncio: { fonte: "AutoScout24, varie sedi", prezzo: "14.900–18.490€", url: "https://www.autoscout24.it/lst/mg/mg3" },
   },
   {
     id: "captur", nome: "Renault Captur E-Tech Full Hybrid", gruppo: "Full hybrid",
-    prezzo: 20500, wltp: 22.5, kw: 107, lunghezza: 4.23, bagagliaio: 400, bagagliaioMax: 1120,
+    allestimenti: [
+      { nome: "Techno 145cv (usato)", prezzo: 18900 },
+      { nome: "Evolution 160cv (km0/promo)", prezzo: 24900 },
+    ],
+    wltp: 22.5, kw: 107, lunghezza: 4.23, bagagliaio: 400, bagagliaioMax: 1120,
     manutenzione: 300, tech: 9, valoreResiduoPct: 0.35, scarto: 0.12,
     ncapStelle: 5, ncapAnno: 2019,
     garanzia: "2 anni km illimitati (standard UE). Batteria E-Tech: 8 anni/160.000km.",
-    nota: "openR Link con Google integrato nativo sugli allestimenti alti — il più vicino ai requisiti tech richiesti.",
-    annuncio: { fonte: "Renault Autobase, Padova", prezzo: "18.850–22.900€", url: "https://autobase.concessionaria.renault.it/auto/usate/padova/renault/captur/" },
+    nota: "openR Link con Google integrato nativo sugli allestimenti alti — il più vicino ai requisiti tech richiesti. Il 160cv km0/promo non va confuso con la Plug-in Hybrid, altro motore.",
+    annuncio: { fonte: "Autobase Renault, Padova/Albignasego (145cv full hybrid)", prezzo: "18.750–19.390€", url: "https://autobase.concessionaria.renault.it/auto/usate/padova/renault/captur/" },
   },
   {
     id: "puma", nome: "Ford Puma EcoBoost Hybrid (automatico)", gruppo: "Mild hybrid",
-    prezzo: 18500, wltp: 20.4, kw: 92, lunghezza: 4.19, bagagliaio: 456, bagagliaioMax: 1216,
+    allestimenti: [
+      { nome: "ST-Line X 125cv automatico", prezzo: 18500 },
+    ],
+    wltp: 20.4, kw: 92, lunghezza: 4.19, bagagliaio: 456, bagagliaioMax: 1216,
     manutenzione: 280, tech: 7, valoreResiduoPct: 0.38, scarto: 0.20,
     ncapStelle: 5, ncapAnno: 2019,
     garanzia: "3 anni/100.000km (2+1).",
-    nota: "Bagagliaio più capiente della lista: 456L + 80L vano MegaBox. Prezzo aggiornato al 20/08/2026 con annunci automatico ST-Line X confermati in zona Padova (Selvazzano Dentro, Piombino Dese).",
+    nota: "Bagagliaio più capiente della lista: 456L + 80L vano MegaBox. Un solo allestimento automatico trovato finora in zona — verifica se esistono altre versioni prima di scartare le alternative.",
     annuncio: { fonte: "AutoUncle/AutoScout24, zona Padova (ST-Line X 125CV automatico)", prezzo: "18.400–18.500€", url: "https://www.autouncle.it/it/auto-usate/Ford/Puma/in/Veneto/Padua" },
   },
   {
     id: "vitara", nome: "Suzuki Vitara Full Hybrid (automatico)", gruppo: "Full hybrid",
-    prezzo: 19500, wltp: 18.5, kw: 85, lunghezza: 4.18, bagagliaio: 289, bagagliaioMax: 900,
+    allestimenti: [
+      { nome: "140CV automatico", prezzo: 19500 },
+    ],
+    wltp: 18.5, kw: 85, lunghezza: 4.18, bagagliaio: 289, bagagliaioMax: 900,
     manutenzione: 300, tech: 5, valoreResiduoPct: 0.35, scarto: 0.12,
     ncapStelle: 5, ncapAnno: 2015,
     garanzia: "3 anni/100.000km, estensibile a 5.",
-    annuncio: { fonte: "AutoScout24 (140CV, 2022)", prezzo: "18.500€", url: "https://www.autoscout24.it/lst/suzuki/vitara/ve_full-hybrid" },
+    annuncio: { fonte: "AutoScout24 (140CV, 2022)", prezzo: "18.500–19.500€", url: "https://www.autoscout24.it/lst/suzuki/vitara/ve_full-hybrid" },
   },
   {
     id: "stonic", nome: "Kia Stonic Mild Hybrid (automatico)", gruppo: "Mild hybrid",
-    prezzo: 18000, wltp: 17.5, kw: 88, lunghezza: 4.14, bagagliaio: 352, bagagliaioMax: 1135,
+    allestimenti: [
+      { nome: "GT-Line 120cv automatico", prezzo: 18000 },
+    ],
+    wltp: 17.5, kw: 88, lunghezza: 4.14, bagagliaio: 352, bagagliaioMax: 1135,
     manutenzione: 230, tech: 6, valoreResiduoPct: 0.38, scarto: 0.20,
     ncapStelle: 3, ncapAnno: 2017,
     garanzia: "7 anni/150.000km — tra le più lunghe in assoluto.",
@@ -69,7 +91,10 @@ const MODELS = [
   },
   {
     id: "bayon", nome: "Hyundai Bayon Mild Hybrid (automatico)", gruppo: "Mild hybrid",
-    prezzo: 17400, wltp: 18.0, kw: 74, lunghezza: 4.18, bagagliaio: 321, bagagliaioMax: 950,
+    allestimenti: [
+      { nome: "XClass DCT", prezzo: 17400 },
+    ],
+    wltp: 18.0, kw: 74, lunghezza: 4.18, bagagliaio: 321, bagagliaioMax: 950,
     manutenzione: 230, tech: 6, valoreResiduoPct: 0.35, scarto: 0.20,
     ncapStelle: 4, ncapAnno: 2021,
     garanzia: "5 anni km illimitati.",
@@ -77,15 +102,24 @@ const MODELS = [
     annuncio: { fonte: "alVolante, Padova (XClass DCT, dic.2023, 35.000km)", prezzo: "17.400€", url: "https://annunci.alvolante.it/auto-usate/hyundai-padova" },
   },
   {
-    id: "tcross", nome: "VW T-Cross 1.0 TSI 115 DSG", gruppo: "Benzina",
-    prezzo: 24000, wltp: 17.5, kw: 85, lunghezza: 4.11, bagagliaio: 385, bagagliaioMax: 1281,
+    id: "tcross", nome: "VW T-Cross 1.0 TSI DSG", gruppo: "Benzina",
+    allestimenti: [
+      { nome: "Style 110cv DSG", prezzo: 18990 },
+      { nome: "Life 115cv DSG", prezzo: 23000 },
+    ],
+    wltp: 17.5, kw: 85, lunghezza: 4.11, bagagliaio: 385, bagagliaioMax: 1281,
     manutenzione: 280, tech: 6, valoreResiduoPct: 0.40, scarto: 0.22,
     ncapStelle: 5, ncapAnno: 2019,
     garanzia: "2 anni km illimitati (standard UE).",
+    nota: "Cluster di annunci 115CV DSG a Padova tra 22.490€ e 23.590€ (2024, 17-24.000km).",
+    annuncio: { fonte: "alVolante, Padova (115CV DSG)", prezzo: "22.490–23.590€", url: "https://annunci.alvolante.it/auto-usate/volkswagen-t-cross-padova" },
   },
   {
     id: "taigo", nome: "VW Taigo 1.0 TSI 115 DSG", gruppo: "Benzina",
-    prezzo: 25000, wltp: 17.2, kw: 85, lunghezza: 4.27, bagagliaio: 438, bagagliaioMax: 1222,
+    allestimenti: [
+      { nome: "R-Line 110cv", prezzo: 25400 },
+    ],
+    wltp: 17.2, kw: 85, lunghezza: 4.27, bagagliaio: 438, bagagliaioMax: 1222,
     manutenzione: 280, tech: 7, valoreResiduoPct: 0.40, scarto: 0.22,
     ncapStelle: 5, ncapAnno: 2022,
     garanzia: "2 anni km illimitati (standard UE).",
@@ -93,7 +127,10 @@ const MODELS = [
   },
   {
     id: "kamiq", nome: "Skoda Kamiq 1.0 TSI 110 DSG", gruppo: "Benzina",
-    prezzo: 19000, wltp: 17.9, kw: 81, lunghezza: 4.24, bagagliaio: 400, bagagliaioMax: 1395,
+    allestimenti: [
+      { nome: "Ambition 110cv DSG", prezzo: 18200 },
+    ],
+    wltp: 17.9, kw: 81, lunghezza: 4.24, bagagliaio: 400, bagagliaioMax: 1395,
     manutenzione: 270, tech: 7, valoreResiduoPct: 0.38, scarto: 0.22,
     ncapStelle: 5, ncapAnno: 2019,
     garanzia: "2 anni km illimitati (standard UE).",
@@ -102,20 +139,105 @@ const MODELS = [
   },
   {
     id: "2008", nome: "Peugeot 2008 Hybrid 136 e-DCS6", gruppo: "Mild hybrid",
-    prezzo: 22000, wltp: 22.5, kw: 100, lunghezza: 4.30, bagagliaio: 434, bagagliaioMax: 1467,
+    allestimenti: [
+      { nome: "Allure 136cv", prezzo: 22400 },
+      { nome: "GT 136cv", prezzo: 24000 },
+      { nome: "Style 136cv", prezzo: 27800 },
+    ],
+    wltp: 22.5, kw: 100, lunghezza: 4.30, bagagliaio: 434, bagagliaioMax: 1467,
     manutenzione: 300, tech: 8, valoreResiduoPct: 0.32, scarto: 0.20,
     ncapStelle: 5, ncapAnno: 2019,
     garanzia: "2 anni km illimitati, estensibile a pagamento.",
     nota: "Lunghezza dichiarata esattamente 4,30m — al limite esatto del garage, verifica l'allestimento scelto.",
+    annuncio: { fonte: "Ghiraldo & Autoin, Padova (2023, 10.500km)", prezzo: "22.400–27.800€", url: "https://www.ghiraldo-autoin.it/auto/usate/padova/peugeot/2008/" },
   },
   {
-    id: "qashqai", nome: "Nissan Qashqai e-Power 140CV", gruppo: "e-Power",
-    prezzo: 27000, wltp: 22.2, kw: 103, lunghezza: 4.43, bagagliaio: 455, bagagliaioMax: 1400,
+    id: "qashqai", nome: "Nissan Qashqai e-Power", gruppo: "e-Power",
+    allestimenti: [
+      { nome: "N-Connecta 140cv (km0)", prezzo: 25900 },
+      { nome: "Tekna 140cv (km0)", prezzo: 30900 },
+    ],
+    wltp: 22.2, kw: 103, lunghezza: 4.43, bagagliaio: 455, bagagliaioMax: 1400,
     manutenzione: 260, tech: 8, valoreResiduoPct: 0.40, scarto: 0.22,
     ncapStelle: 5, ncapAnno: 2021,
     garanzia: "3 anni/100.000km. Batteria/componenti e-Power: 8 anni/160.000km.",
     nota: "e-Power: il benzina fa solo da generatore. Ottima in città, ma cala parecchio in autostrada pura (12-13km/L nei test).",
-    annuncio: { fonte: "Concessionarie km0, Padova", prezzo: "25.900–25.950€", url: "https://www.autoscout24.it" },
+    annuncio: { fonte: "AutoScout24/Campello Motors, Veneto (km0 140CV)", prezzo: "25.900–30.900€", url: "https://www.autoscout24.it/lst/nissan/qashqai/padova" },
+  },
+  {
+    id: "yaris", nome: "Toyota Yaris Hybrid", gruppo: "Full hybrid",
+    allestimenti: [
+      { nome: "Hybrid 115cv", prezzo: 16500 },
+      { nome: "Hybrid 130cv", prezzo: 18500 },
+    ],
+    wltp: 24.0, kw: 85, lunghezza: 3.94, bagagliaio: 286, bagagliaioMax: 800,
+    manutenzione: 230, tech: 7, valoreResiduoPct: 0.45, scarto: 0.10,
+    ncapStelle: 4, ncapAnno: 2025,
+    garanzia: "3 anni/100.000km, estensibile a 5 con tagliandi Toyota. Batteria ibrida: 10 anni con controllo annuale.",
+    nota: "Più corta e più economica della Yaris Cross (39cm in meno), ma bagagliaio molto più piccolo (286L, il più ridotto di tutta la lista) — niente assetto rialzato da SUV.",
+    annuncio: { fonte: "AutoScout24 (116CV, 06/2022, 93.751km)", prezzo: "16.490€", url: "https://www.autoscout24.it/lst/toyota/yaris/ve_hybrid" },
+  },
+  {
+    id: "fiat600", nome: "Fiat 600 Hybrid", gruppo: "Mild hybrid",
+    allestimenti: [
+      { nome: "Hybrid 110cv", prezzo: 17500 },
+      { nome: "Hybrid 145cv / La Prima", prezzo: 22000 },
+    ],
+    wltp: 20.2, kw: 81, lunghezza: 4.18, bagagliaio: 385, bagagliaioMax: 1256,
+    manutenzione: 260, tech: 6, valoreResiduoPct: 0.32, scarto: 0.20,
+    ncapStelle: null, ncapAnno: null, ncapNonTestata: true,
+    garanzia: "2 anni km illimitati (standard UE).",
+    nota: "Non risulta testata da Euro NCAP: nessun rating ufficiale trovato, non solo un dato incerto. Nel punteggio ponderato conta come valore neutro (né buono né scarso) proprio perché non c'è un test da cui partire — non un voto reale. Se la sicurezza pesa molto per te, è un'incognita vera, non solo un numero da verificare.",
+    annuncio: { fonte: "AutoScout24, varie sedi (usato nazionale)", prezzo: "17.490–18.950€", url: "https://www.autoscout24.it/auto/fiat/fiat-600/" },
+  },
+  {
+    id: "c3aircross", nome: "Citroën C3 Aircross Hybrid 136", gruppo: "Mild hybrid",
+    allestimenti: [
+      { nome: "Hybrid 136cv (nuovo)", prezzo: 24790 },
+    ],
+    wltp: 20.0, kw: 100, lunghezza: 4.395, bagagliaio: 460, bagagliaioMax: 1600,
+    manutenzione: 270, tech: 6, valoreResiduoPct: 0.30, scarto: 0.20,
+    ncapStelle: 4, ncapAnno: 2024,
+    garanzia: "2 anni km illimitati (standard UE).",
+    nota: "ATTENZIONE lunghezza: la nuova generazione (motore Hybrid 136cv) è lunga 4,395m — 9,5cm oltre il tuo limite garage, non 4,15m come la vecchia serie. Gli annunci usati economici che si trovano oggi (da 13.700€ a Padova) sono quasi certamente la generazione precedente, più corta ma senza motore ibrido. ATTENZIONE sicurezza: esiste online la notizia di uno 'zero stelle' per una C3 Aircross — è il test Latin NCAP di un'auto DIVERSA prodotta in Brasile (2 soli airbag, non venduta in Europa), non questo modello. Il test Euro NCAP europeo di questa C3 Aircross conferma buone prestazioni generali con un punto debole nella protezione whiplash dei sedili posteriori.",
+    annuncio: { fonte: "Listino ufficiale Citroën (Hybrid 136cv nuovo)", prezzo: "24.790€", url: "https://www.autoscout24.it/auto/citroen/citroen-c3/citroen-c3-aircross/" },
+  },
+  {
+    id: "mokka", nome: "Opel Mokka Hybrid", gruppo: "Mild hybrid",
+    allestimenti: [
+      { nome: "Hybrid 145cv GS automatico", prezzo: 22500 },
+    ],
+    wltp: 19.0, kw: 107, lunghezza: 4.15, bagagliaio: 350, bagagliaioMax: 1105,
+    manutenzione: 270, tech: 7, valoreResiduoPct: 0.35, scarto: 0.20,
+    ncapStelle: 4, ncapAnno: 2021,
+    garanzia: "2 anni km illimitati (standard UE). Batteria: 8 anni/100.000km (dato relativo alla versione elettrica, da confermare per la Hybrid).",
+    nota: "Prezzo ancora stimato dal listino nuovo con deprezzamento tipico: non ho trovato un annuncio pulito per la Hybrid 145cv GS DCT6 automatico specifica, ma il range di mercato usato in Veneto (fino a 22.905€ per le più recenti) rende la stima plausibile, non solo inventata.",
+    annuncio: { fonte: "Range di mercato Veneto (AutoUncle) — nessun singolo annuncio esatto verificato", prezzo: "~22.500€ (stima supportata)", url: "https://www.autouncle.it/it/auto-usate/Opel/Mokka/in/Veneto" },
+  },
+  {
+    id: "jazz", nome: "Honda Jazz e:HEV", gruppo: "Full hybrid",
+    allestimenti: [
+      { nome: "Elegance (km0, 107cv)", prezzo: 21840 },
+      { nome: "Comfort (usato 2020, 68.800km)", prezzo: 13800 },
+    ],
+    wltp: 25.5, kw: 80, lunghezza: 4.04, bagagliaio: 304, bagagliaioMax: 1205,
+    manutenzione: 220, tech: 6, valoreResiduoPct: 0.40, scarto: 0.10,
+    ncapStelle: 5, ncapAnno: 2020,
+    garanzia: "3 anni/100.000km, estensibile. Honda SENSING (ADAS) di serie su tutta la gamma.",
+    nota: "Full hybrid vero (i-MMD), non mild hybrid — può muoversi a batteria pura a basse velocità come Toyota. Bagagliaio tra i più piccoli della lista (304L) ma i Sedili Magici Honda si abbattono in modi non standard, utile per carichi ingombranti anche se il volume dichiarato è modesto. Annuncio km0 trovato a Padova (Albignasego, Ceccato Automobili).",
+    annuncio: { fonte: "AutoScout24/AutoUncle, Padova/Albignasego e Veneto", prezzo: "13.800–22.800€", url: "https://www.autouncle.it/it/auto-usate/Honda/Jazz/in/Veneto" },
+  },
+  {
+    id: "formentor", nome: "Cupra Formentor 1.5 TSI Mild Hybrid", gruppo: "Mild hybrid",
+    allestimenti: [
+      { nome: "1.5 TSI 150cv DSG (usato)", prezzo: 28000 },
+    ],
+    wltp: 15.9, kw: 110, lunghezza: 4.45, bagagliaio: 420, bagagliaioMax: 1168,
+    manutenzione: 320, tech: 8, valoreResiduoPct: 0.38, scarto: 0.20,
+    ncapStelle: 5, ncapAnno: 2020,
+    garanzia: "2 anni km illimitati (standard UE, gruppo Volkswagen).",
+    nota: "ATTENZIONE: è l'unico modello dell'intera gamma Cupra sotto i 30.000€, ma è lungo 4,45m — 15cm oltre il tuo limite garage, il divario più ampio di tutta la lista (peggio della Qashqai). Nessun modello Cupra attuale entra nei 4,3m: Leon 4,37m, Born (elettrica) 4,32m. Bagagliaio e stelle NCAP stimati con confidenza moderata, non verificati con una fonte diretta in questa sessione. Prezzo usato al limite del tuo budget: verifica bene cosa include prima di considerarla.",
+    annuncio: { fonte: "Subito.it, Padova/Veneto (1.5 TSI usato)", prezzo: "25.900–30.990€", url: "https://www.subito.it/annunci-italia/vendita/auto/cupra/formentor/ibrida/" },
   },
 ];
 
@@ -135,6 +257,15 @@ const DEFAULT_ASSUMPTIONS = {
 };
 
 const DEFAULT_WEIGHTS = { consumi: 25, costo: 25, sicurezza: 20, tech: 15, bagagliaio: 15 };
+
+const SORT_OPTIONS = [
+  { id: "punteggio", label: "Punteggio", fn: (a, b) => b.punteggio - a.punteggio },
+  { id: "prezzo", label: "Prezzo (dal più economico)", fn: (a, b) => a.prezzo - b.prezzo },
+  { id: "consumi", label: "Consumi reali (dal migliore)", fn: (a, b) => b.consReale - a.consReale },
+  { id: "costo", label: "Costo gestione annuo (dal più basso)", fn: (a, b) => a.costoGestione - b.costoGestione },
+  { id: "bagagliaio", label: "Bagagliaio (dal più grande)", fn: (a, b) => b.bagagliaio - a.bagagliaio },
+  { id: "sicurezza", label: "Sicurezza NCAP (dal migliore)", fn: (a, b) => b.ncapStelle - a.ncapStelle },
+];
 
 const STATI = [
   { id: "da_vedere", label: "Da vedere", color: "#5FB8D6" },
@@ -175,6 +306,10 @@ export default function App() {
   const [weights, setWeights] = useState(DEFAULT_WEIGHTS);
   const [insurance, setInsurance] = useState({});
   const [tracking, setTracking] = useState([]);
+  const [trimSelection, setTrimSelection] = useState({});
+  const [sortBy, setSortBy] = useState("punteggio");
+  const [hideGarageFail, setHideGarageFail] = useState(false);
+  const [hideBudgetFail, setHideBudgetFail] = useState(false);
   const [selectedRadar, setSelectedRadar] = useState(["yaris-cross", "captur", "mg3"]);
   const [expanded, setExpanded] = useState(null);
   const [loaded, setLoaded] = useState(false);
@@ -186,9 +321,18 @@ export default function App() {
       const ins = localStorage.getItem("confronto-auto:insurance");
       const w = localStorage.getItem("confronto-auto:weights");
       const trk = localStorage.getItem("confronto-auto:tracking");
+      const trims = localStorage.getItem("confronto-auto:trims");
+      const filt = localStorage.getItem("confronto-auto:filters");
       if (ins) setInsurance(JSON.parse(ins));
       if (w) setWeights(JSON.parse(w));
       if (trk) setTracking(JSON.parse(trk));
+      if (trims) setTrimSelection(JSON.parse(trims));
+      if (filt) {
+        const f = JSON.parse(filt);
+        if (f.sortBy) setSortBy(f.sortBy);
+        if (typeof f.hideGarageFail === "boolean") setHideGarageFail(f.hideGarageFail);
+        if (typeof f.hideBudgetFail === "boolean") setHideBudgetFail(f.hideBudgetFail);
+      }
     } catch (e) {
       // primo utilizzo su questo browser, o dato corrotto — si riparte da zero
     } finally {
@@ -211,10 +355,33 @@ export default function App() {
     try { localStorage.setItem("confronto-auto:weights", JSON.stringify(next)); } catch (e) {}
   }, []);
 
+  const saveTrimSelection = useCallback((next) => {
+    setTrimSelection(next);
+    try { localStorage.setItem("confronto-auto:trims", JSON.stringify(next)); } catch (e) {}
+  }, []);
+
+  const saveFilters = useCallback((next) => {
+    if (next.sortBy !== undefined) setSortBy(next.sortBy);
+    if (next.hideGarageFail !== undefined) setHideGarageFail(next.hideGarageFail);
+    if (next.hideBudgetFail !== undefined) setHideBudgetFail(next.hideBudgetFail);
+    try {
+      const merged = {
+        sortBy: next.sortBy ?? sortBy,
+        hideGarageFail: next.hideGarageFail ?? hideGarageFail,
+        hideBudgetFail: next.hideBudgetFail ?? hideBudgetFail,
+      };
+      localStorage.setItem("confronto-auto:filters", JSON.stringify(merged));
+    } catch (e) {}
+  }, [sortBy, hideGarageFail, hideBudgetFail]);
+
   // ---- calcoli ----
   const computed = useMemo(() => {
     const a = assumptions;
     return MODELS.map((m) => {
+      const trimIdx = trimSelection[m.id] ?? 0;
+      const allestimento = m.allestimenti[trimIdx] ?? m.allestimenti[0];
+      const prezzo = allestimento.prezzo;
+
       const consReale = m.wltp / (1 + m.scarto);
       const carburante = a.kmYear / consReale * a.fuelPrice;
       const bollo4plus = m.kw <= 100 ? m.kw * a.bolloRate100 : 100 * a.bolloRate100 + (m.kw - 100) * a.bolloRateOver100;
@@ -222,14 +389,14 @@ export default function App() {
       const ins = insurance[m.id];
       const hasIns = ins !== undefined && ins !== null && ins !== "" && !isNaN(ins);
       const costoGestione = hasIns ? carburante + Number(ins) + m.manutenzione + bolloMedio : null;
-      const valoreResiduo = m.prezzo * m.valoreResiduoPct;
-      const tco = hasIns ? m.prezzo + costoGestione * a.horizon : null;
+      const valoreResiduo = prezzo * m.valoreResiduoPct;
+      const tco = hasIns ? prezzo + costoGestione * a.horizon : null;
       const costoNetto10 = hasIns ? tco - valoreResiduo : null;
 
       const scoreConsumi = clamp((consReale - a.consMin) / (a.consMax - a.consMin) * 10, 0, 10);
       const scoreCosto = hasIns ? clamp((a.costMax - costoGestione) / (a.costMax - a.costMin) * 10, 0, 10) : null;
       const scoreBagagliaio = clamp((m.bagagliaio - a.bagMin) / (a.bagMax - a.bagMin) * 10, 0, 10);
-      const scoreSicurezza = m.ncapStelle * 2;
+      const scoreSicurezza = m.ncapNonTestata ? 5 : m.ncapStelle * 2;
       const scoreTech = m.tech;
 
       const wSum = weights.consumi + weights.costo + weights.sicurezza + weights.tech + weights.bagagliaio;
@@ -239,23 +406,35 @@ export default function App() {
         : null;
 
       const garageOk = m.lunghezza <= a.lengthLimit;
-      const budgetOk = m.prezzo <= a.budgetMax;
+      const budgetOk = prezzo <= a.budgetMax;
       const consOk = consReale >= a.consThreshold;
-      const ncapStale = (2026 - m.ncapAnno) > 6;
+      const ncapStale = m.ncapNonTestata ? false : (2026 - m.ncapAnno) > 6;
 
       return {
-        ...m, consReale, carburante, bollo4plus, bolloMedio, costoGestione,
+        ...m, prezzo, allestimentoNome: allestimento.nome, trimIdx,
+        consReale, carburante, bollo4plus, bolloMedio, costoGestione,
         valoreResiduo, tco, costoNetto10, scoreConsumi, scoreCosto, scoreBagagliaio,
         scoreSicurezza, scoreTech, punteggio, garageOk, budgetOk, consOk, ncapStale, hasIns,
       };
     });
-  }, [assumptions, weights, insurance]);
+  }, [assumptions, weights, insurance, trimSelection]);
+
+  const passesFilters = useCallback((m) => {
+    if (hideGarageFail && !m.garageOk) return false;
+    if (hideBudgetFail && !m.budgetOk) return false;
+    return true;
+  }, [hideGarageFail, hideBudgetFail]);
+
+  const activeSort = SORT_OPTIONS.find((s) => s.id === sortBy) ?? SORT_OPTIONS[0];
 
   const ranked = useMemo(
-    () => computed.filter((m) => m.hasIns).sort((a, b) => b.punteggio - a.punteggio),
-    [computed]
+    () => computed.filter((m) => m.hasIns).filter(passesFilters).sort(activeSort.fn),
+    [computed, passesFilters, activeSort]
   );
-  const unranked = useMemo(() => computed.filter((m) => !m.hasIns), [computed]);
+  const unranked = useMemo(
+    () => computed.filter((m) => !m.hasIns).filter(passesFilters),
+    [computed, passesFilters]
+  );
 
   const trackingByModel = useMemo(() => {
     const map = {};
@@ -297,7 +476,7 @@ export default function App() {
           <div style={S.eyebrow}><Ruler size={14} strokeWidth={2.5} /> CONTROLLO GARAGE</div>
           <h1 style={S.h1}>Entra o non entra.</h1>
           <p style={S.heroSub}>
-            12 auto, misurate una per una contro il tuo garage da <strong style={{ color: C.accent }}>{assumptions.lengthLimit.toFixed(2)}&nbsp;m</strong>.
+            {MODELS.length} auto, misurate una per una contro il tuo garage da <strong style={{ color: C.accent }}>{assumptions.lengthLimit.toFixed(2)}&nbsp;m</strong>.
             Il resto — prezzo, consumi reali, sicurezza — conta solo per chi ci entra davvero.
           </p>
 
@@ -410,15 +589,49 @@ export default function App() {
           <p style={S.panelSub}>
             {ranked.length === 0
               ? "Aggiungi almeno un preventivo assicurativo qui sotto per vedere la classifica."
-              : `${ranked.length} di 12 modelli in classifica — aggiungi le assicurazioni mancanti per completarla.`}
+              : `${ranked.length} di ${MODELS.length} modelli in classifica — aggiungi le assicurazioni mancanti per completarla.`}
           </p>
+
+          <div style={S.filterBar}>
+            <label style={S.assumptionField}>
+              <span>Ordina per</span>
+              <select
+                value={sortBy}
+                onChange={(e) => saveFilters({ sortBy: e.target.value })}
+                style={S.numInput}
+              >
+                {SORT_OPTIONS.map((s) => <option key={s.id} value={s.id}>{s.label}</option>)}
+              </select>
+            </label>
+            <button
+              onClick={() => saveFilters({ hideGarageFail: !hideGarageFail })}
+              style={{ ...S.chip, ...(hideGarageFail ? S.chipActive : {}) }}
+            >
+              <Ruler size={12} style={{ verticalAlign: -2, marginRight: 4 }} />
+              Nascondi chi non entra in garage
+            </button>
+            <button
+              onClick={() => saveFilters({ hideBudgetFail: !hideBudgetFail })}
+              style={{ ...S.chip, ...(hideBudgetFail ? S.chipActive : {}) }}
+            >
+              Nascondi fuori budget
+            </button>
+          </div>
+
+          {(hideGarageFail || hideBudgetFail) && (() => {
+            const hiddenCount = computed.length - computed.filter(passesFilters).length;
+            return hiddenCount > 0 ? (
+              <div style={S.filterHint}>{hiddenCount} modell{hiddenCount === 1 ? "o" : "i"} nascost{hiddenCount === 1 ? "o" : "i"} dai filtri attivi.</div>
+            ) : null;
+          })()}
 
           <div style={S.cardList}>
             {ranked.map((m, i) => (
               <ModelCard key={m.id} m={m} rank={i + 1} expanded={expanded === m.id}
                 onToggle={() => setExpanded(expanded === m.id ? null : m.id)}
                 insurance={insurance} saveInsurance={saveInsurance} assumptions={assumptions}
-                trackCount={trackingByModel[m.id] || 0} />
+                trackCount={trackingByModel[m.id] || 0}
+                trimSelection={trimSelection} saveTrimSelection={saveTrimSelection} />
             ))}
           </div>
 
@@ -430,7 +643,8 @@ export default function App() {
                   <ModelCard key={m.id} m={m} rank={null} expanded={expanded === m.id}
                     onToggle={() => setExpanded(expanded === m.id ? null : m.id)}
                     insurance={insurance} saveInsurance={saveInsurance} assumptions={assumptions}
-                    trackCount={trackingByModel[m.id] || 0} />
+                    trackCount={trackingByModel[m.id] || 0}
+                    trimSelection={trimSelection} saveTrimSelection={saveTrimSelection} />
                 ))}
               </div>
             </>
@@ -489,7 +703,7 @@ export default function App() {
             <li><strong>Bollo</strong>: Veneto, esente i primi {assumptions.exemptYears} anni per le ibride, poi due fasce (fino e oltre 100kW). Alcune fonti citano tariffe leggermente diverse — verifica su infobollo.regione.veneto.it prima di decidere.</li>
             <li><strong>Incentivi statali</strong>: non inclusi. A fine luglio 2026 il MIMIT non ha confermato un ecobonus generalizzato 2026 per benzina/ibride non plug-in senza rottamazione.</li>
             <li><strong>Euro NCAP</strong>: le stelle da sole non bastano — un test di più di 6 anni (Suzuki Vitara 2015, Kia Stonic 2017) non riflette gli standard di sicurezza attuali, anche se il punteggio ufficiale resta quello.</li>
-            <li>Prezzi verificati su annunci reali entro 200km da Padova per 11 modelli su 12 (fine luglio/inizio agosto 2026) — solo il Peugeot 2008 Hybrid resta una stima di mercato, non ancora trovato un annuncio esatto.</li>
+            <li>Prezzi verificati su annunci reali entro 200km da Padova per 13 dei {MODELS.length} modelli (Honda Jazz incluso, con un annuncio km0 trovato proprio ad Albignasego). Dati più deboli su Fiat 600, C3 Aircross, Mokka (stelle NCAP non verificate con fonte diretta per i primi due; Fiat 600 non risulta testata affatto) e Cupra Formentor (bagagliaio/NCAP con confidenza moderata) — vedi la nota su ciascuna card. Ricontrolla comunque prima di un acquisto: gli annunci usati cambiano nel giro di poche settimane.</li>
             <li><strong>Bagagliaio a sedili abbattuti</strong>: confermato da fonti dirette per 9 modelli; per Captur E-Tech, Suzuki Vitara e Bayon è una stima proporzionale, segnalata nella card del modello.</li>
             <li><strong>Correzione Hyundai Bayon</strong>: il bagagliaio base è 321L, non 411L come inizialmente indicato — quel valore vale per la versione benzina pura, non per la mild hybrid che ha il modulo elettrico sotto il piano di carico.</li>
             <li><strong>Garanzia di fabbrica</strong>: mostrata per riferimento, ma per un'auto usata conta solo quella residua dalla data di immatricolazione — chiedi sempre il libretto di garanzia originale.</li>
@@ -561,8 +775,8 @@ function BreakEvenSection({ computed, assumptions }) {
           <div style={S.beTable}>
             <div style={S.beTableHeadRow}>
               <span></span>
-              <span style={S.beColHead}>{a.nome}</span>
-              <span style={S.beColHead}>{b.nome}</span>
+              <span style={S.beColHead} title={a.nome}>{a.nome}</span>
+              <span style={S.beColHead} title={b.nome}>{b.nome}</span>
             </div>
             {rows.map((r) => (
               <div key={r.label} style={S.beRow}>
@@ -753,8 +967,9 @@ function TrackingSection({ tracking, saveTracking }) {
   );
 }
 
-function ModelCard({ m, rank, expanded, onToggle, insurance, saveInsurance, assumptions, trackCount }) {
+function ModelCard({ m, rank, expanded, onToggle, insurance, saveInsurance, assumptions, trackCount, trimSelection, saveTrimSelection }) {
   const medal = rank === 1 ? "🥇" : rank === 2 ? "🥈" : rank === 3 ? "🥉" : null;
+  const multiTrim = m.allestimenti.length > 1;
   return (
     <div style={{ ...S.card, ...(rank && rank <= 3 ? S.cardTop : {}) }}>
       <div style={S.cardHead} onClick={onToggle}>
@@ -768,9 +983,9 @@ function ModelCard({ m, rank, expanded, onToggle, insurance, saveInsurance, assu
             {trackCount > 0 && <span style={S.badgeTrack}><ClipboardList size={11} /> {trackCount} annunci tracciati</span>}
           </div>
           <div style={S.cardMetaRow}>
-            <span><NcapStars stelle={m.ncapStelle} stale={m.ncapStale} /></span>
+            <span><NcapStars stelle={m.ncapStelle} stale={m.ncapStale} nonTestata={m.ncapNonTestata} /></span>
             <span style={S.metaDot}>·</span>
-            <span>{eur(m.prezzo)}</span>
+            <span>{eur(m.prezzo)}{multiTrim ? ` (${m.allestimentoNome})` : ""}</span>
             <span style={S.metaDot}>·</span>
             <span>{fmt1(m.consReale)} km/L reali</span>
             <span style={S.metaDot}>·</span>
@@ -802,6 +1017,26 @@ function ModelCard({ m, rank, expanded, onToggle, insurance, saveInsurance, assu
             <div style={S.noteBox}>
               <Info size={14} color={C.accent} style={{ flexShrink: 0, marginTop: 2 }} />
               <span>{m.nota}</span>
+            </div>
+          )}
+
+          {multiTrim && (
+            <div>
+              <div style={S.trimLabel}>Allestimento (cambia il prezzo usato nei calcoli)</div>
+              <div style={S.chipRow}>
+                {m.allestimenti.map((al, idx) => (
+                  <button
+                    key={al.nome}
+                    onClick={(e) => {
+                      e.stopPropagation();
+                      saveTrimSelection({ ...trimSelection, [m.id]: idx });
+                    }}
+                    style={{ ...S.chip, ...(idx === m.trimIdx ? S.chipActive : {}) }}
+                  >
+                    {al.nome} — {eur(al.prezzo)}
+                  </button>
+                ))}
+              </div>
             </div>
           )}
 
@@ -851,7 +1086,10 @@ function DetailRow({ icon, label, value, strong }) {
   );
 }
 
-function NcapStars({ stelle, stale }) {
+function NcapStars({ stelle, stale, nonTestata }) {
+  if (nonTestata) {
+    return <span style={{ fontSize: 11, fontFamily: "'JetBrains Mono', monospace", color: C.textFaint, border: `1px solid ${C.border}`, borderRadius: 4, padding: "1px 5px" }}>NCAP: non testata</span>;
+  }
   return (
     <span style={{ display: "inline-flex", alignItems: "center", gap: 2, opacity: stale ? 0.45 : 1 }}>
       {Array.from({ length: 5 }).map((_, i) => (
@@ -925,6 +1163,8 @@ const S = {
 
   cardList: { display: "flex", flexDirection: "column", gap: 10 },
   dividerLabel: { fontSize: 11.5, fontWeight: 600, letterSpacing: "0.05em", textTransform: "uppercase", color: C.textFaint, margin: "22px 0 12px" },
+  filterBar: { display: "flex", alignItems: "flex-end", gap: 10, flexWrap: "wrap", marginBottom: 8 },
+  filterHint: { fontSize: 11.5, color: C.textFaint, marginBottom: 14 },
 
   card: { border: `1px solid ${C.border}`, borderRadius: 12, background: C.panelAlt, overflow: "hidden" },
   cardTop: { borderColor: "rgba(232,169,59,0.4)" },
@@ -936,7 +1176,7 @@ const S = {
   groupTag: { fontSize: 10.5, color: C.textFaint, border: `1px solid ${C.border}`, borderRadius: 5, padding: "1px 6px" },
   badgeDanger: { display: "inline-flex", alignItems: "center", gap: 3, fontSize: 10.5, fontWeight: 600, color: C.danger, background: "rgba(239,124,110,0.12)", borderRadius: 5, padding: "2px 6px" },
   badgeTrack: { display: "inline-flex", alignItems: "center", gap: 3, fontSize: 10.5, fontWeight: 600, color: "#5FB8D6", background: "rgba(95,184,214,0.12)", borderRadius: 5, padding: "2px 6px" },
-  cardMetaRow: { display: "flex", alignItems: "center", gap: 8, fontSize: 12, color: C.textSecondary, marginTop: 4, fontFamily: "'JetBrains Mono', monospace" },
+  cardMetaRow: { display: "flex", alignItems: "center", gap: 8, rowGap: 4, flexWrap: "wrap", fontSize: 12, color: C.textSecondary, marginTop: 4, fontFamily: "'JetBrains Mono', monospace" },
   metaDot: { color: C.textFaint },
   cardScore: { display: "flex", alignItems: "baseline", gap: 2, flexShrink: 0, minWidth: 46, justifyContent: "flex-end" },
   scoreNum: { fontFamily: "'Space Grotesk', sans-serif", fontSize: 20, fontWeight: 700, color: C.accent },
@@ -954,6 +1194,7 @@ const S = {
   detailValue: { fontFamily: "'JetBrains Mono', monospace", color: C.textSecondary },
 
   insLabel: { display: "flex", flexDirection: "column", gap: 6, fontSize: 12.5, color: C.textSecondary, maxWidth: 240 },
+  trimLabel: { fontSize: 11.5, color: C.textFaint, marginBottom: 8 },
   listingLink: { display: "flex", alignItems: "center", gap: 6, fontSize: 12, color: C.accent, textDecoration: "none" },
 
   chipRow: { display: "flex", flexWrap: "wrap", gap: 8, marginBottom: 20 },
@@ -978,7 +1219,7 @@ const S = {
   beVs: { fontFamily: "'JetBrains Mono', monospace", color: C.textFaint, fontSize: 13, paddingBottom: 9 },
   beTable: { display: "flex", flexDirection: "column", gap: 2, marginBottom: 18 },
   beTableHeadRow: { display: "grid", gridTemplateColumns: "1.4fr 1fr 1fr", gap: 12, paddingBottom: 8, marginBottom: 4, borderBottom: `1px solid ${C.border}` },
-  beColHead: { fontSize: 12, fontWeight: 700, color: C.text, fontFamily: "'Space Grotesk', sans-serif" },
+  beColHead: { fontSize: 12, fontWeight: 700, color: C.text, fontFamily: "'Space Grotesk', sans-serif", overflow: "hidden", textOverflow: "ellipsis", whiteSpace: "nowrap" },
   beRow: { display: "grid", gridTemplateColumns: "1.4fr 1fr 1fr", gap: 12, padding: "6px 0", borderBottom: `1px solid ${C.border}`, fontSize: 12.5 },
   beVerdict: { display: "flex", gap: 10, alignItems: "flex-start", background: C.panelAlt, border: `1px solid ${C.border}`, borderRadius: 10, padding: "14px 16px", fontSize: 13, color: C.textSecondary, lineHeight: 1.6 },
 };
