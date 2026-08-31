@@ -292,14 +292,15 @@ const MODELS = [
   {
     id: "focus-sw", nome: "Ford Focus Estate EcoBoost Hybrid", gruppo: "Mild hybrid", carrozzeria: "Wagon",
     allestimenti: [
-      { nome: "125cv mHEV automatico (usato, stima)", prezzo: 19500 },
+      { nome: "125cv mHEV SW Active (usato)", prezzo: 16900 },
+      { nome: "125cv mHEV SW ST-Line (usato)", prezzo: 21500 },
     ],
     wltp: 18.9, kw: 92, lunghezza: 4.65, bagagliaio: 575, bagagliaioMax: 1620,
     manutenzione: 270, tech: 6, valoreResiduoPct: 0.30, scarto: 0.20,
     ncapStelle: 5, ncapAnno: 2018,
     garanzia: "3 anni/100.000km (2+1).",
-    nota: "Produzione terminata a novembre 2025: oggi si trova solo usata, nessun nuovo/km0 possibile. Prezzo stimato per analogia con la Puma (stesso propulsore) — non ho trovato un annuncio specifico con prezzo esplicito in questa sessione, solo conferma che il mercato dell'usato a Padova esiste. Verifica un prezzo reale prima di fidartene.",
-    annuncio: { fonte: "Quattroruote/Subito, Padova — nessun prezzo specifico verificato", prezzo: "~19.500€ (stima)", url: "https://www.quattroruote.it/auto-usate/annunci/marca-ford/modello-focus/regione-veneto/provincia-padova" },
+    nota: "ATTENZIONE cambio: quasi tutti gli annunci EcoBoost Hybrid SW trovati in Veneto sono a cambio MANUALE, non automatico — le uniche automatiche reali trovate sono diesel EcoBlue, non benzina/ibrida. Il cambio automatico su questo motore in versione wagon sembra raro o assente sul mercato reale: verifica bene prima di contare su questo modello se l'automatico è un requisito fermo. Produzione terminata a novembre 2025: solo usato disponibile, nessun nuovo/km0.",
+    annuncio: { fonte: "alVolante, Veneto", prezzo: "16.900–21.500€", url: "https://annunci.alvolante.it/auto-usate/ford-focus-veneto" },
   },
   {
     id: "swift", nome: "Suzuki Swift Mild Hybrid", gruppo: "Mild hybrid", carrozzeria: "Berlina",
@@ -403,14 +404,14 @@ const MODELS = [
   {
     id: "cx30", nome: "Mazda CX-30 Mild Hybrid", gruppo: "Mild hybrid", carrozzeria: "SUV",
     allestimenti: [
-      { nome: "e-Skyactiv X 145cv MHEV (stima)", prezzo: 27000 },
+      { nome: "e-Skyactiv-G 150cv MHEV automatico (usato)", prezzo: 20300 },
     ],
     wltp: 17.5, kw: 107, lunghezza: 4.395, bagagliaio: 430, bagagliaioMax: 1406,
     manutenzione: 290, tech: 7, valoreResiduoPct: 0.38, scarto: 0.15,
     ncapStelle: 5, ncapAnno: 2019,
     garanzia: "3 anni/100.000km.",
-    nota: "Lunga 4,395m — 9,5cm oltre il tuo limite garage. Prezzo stimato per deprezzamento da nuovo (~32-35.000€): non ho trovato un annuncio usato con importo esplicito in questa sessione, verifica prima di fidartene.",
-    annuncio: { fonte: "Nessun annuncio con prezzo esplicito verificato in questa sessione", prezzo: "~27.000€ (stima)", url: "https://www.autoscout24.it/lst/mazda/cx-30/ve_hybrid" },
+    nota: "Lunga 4,395m — 9,5cm oltre il tuo limite garage. Prezzo aggiornato con annuncio reale automatico trovato in Veneto (Roverchiara, VR): 2022, 55.000km, 150cv mild hybrid.",
+    annuncio: { fonte: "AutoUncle, Roverchiara (VR)", prezzo: "20.300€", url: "https://www.autouncle.it/it/auto-usate/Mazda/CX-30/in/Veneto" },
   },
   {
     id: "arona", nome: "Seat Arona", gruppo: "Benzina", carrozzeria: "SUV",
@@ -428,14 +429,14 @@ const MODELS = [
   {
     id: "ibiza", nome: "Seat Ibiza", gruppo: "Benzina", carrozzeria: "Berlina",
     allestimenti: [
-      { nome: "1.0 EcoTSI 95cv (stima)", prezzo: 15000 },
+      { nome: "1.0 EcoTSI Style 115cv DSG (usato)", prezzo: 16900 },
     ],
-    wltp: 19.0, kw: 70, lunghezza: 4.059, bagagliaio: 355, bagagliaioMax: 1165,
+    wltp: 19.0, kw: 85, lunghezza: 4.059, bagagliaio: 355, bagagliaioMax: 1165,
     manutenzione: 250, tech: 6, valoreResiduoPct: 0.32, scarto: 0.20,
     ncapStelle: 4, ncapAnno: 2021,
     garanzia: "2 anni km illimitati (standard UE).",
-    nota: "NON è una vera berlina: Seat non vende berline in Italia, la Ibiza (5 porte) è il sostituto più vicino. Prezzo stimato: l'unico annuncio reale trovato (13.700€, De Bona Padova) era un 1.6 TDI diesel, non benzina come richiesto — non l'ho usato per non mischiare alimentazioni diverse. Verifica un prezzo benzina reale prima di fidartene.",
-    annuncio: { fonte: "Nessun annuncio benzina verificato in questa sessione", prezzo: "~15.000€ (stima)", url: "https://www.autoscout24.it/lst/seat/ibiza/padova" },
+    nota: "NON è una vera berlina: Seat non vende berline in Italia, la Ibiza (5 porte) è il sostituto più vicino. Prezzo aggiornato: trovato annuncio reale a Padova, benzina, cambio automatico DSG confermato (02/2025, 18.126km).",
+    annuncio: { fonte: "AutoUncle, Padova", prezzo: "16.900€", url: "https://www.autouncle.it/it/auto-usate/Seat/Ibiza/in/Veneto" },
   },
   {
     id: "leon-st", nome: "Seat Leon Sportstourer", gruppo: "Benzina", carrozzeria: "Wagon",
@@ -488,26 +489,26 @@ const MODELS = [
   {
     id: "junior", nome: "Alfa Romeo Junior Hybrid", gruppo: "Mild hybrid", carrozzeria: "SUV",
     allestimenti: [
-      { nome: "1.2 145cv Hybrid eDCT6 Speciale (nuova da immatricolare, stima prezzo)", prezzo: 30500 },
+      { nome: "1.2 145cv Hybrid Techno Speciale (km0)", prezzo: 27950 },
     ],
     wltp: 18.2, kw: 107, lunghezza: 4.17, bagagliaio: 400, bagagliaioMax: 1280,
     manutenzione: 310, tech: 8, valoreResiduoPct: 0.35, scarto: 0.18,
     ncapStelle: 5, ncapAnno: 2024,
     garanzia: "2 anni km illimitati (standard UE).",
-    nota: "Prezzo stimato: annuncio reale trovato a Padova (Salone dell'Auto Vivarini) ma senza l'importo esplicito nel risultato di ricerca — verifica prima di contare sul dato. Condivide la piattaforma CMP con Fiat 600, Jeep Avenger e Peugeot 2008/208: stessa base tecnica, brand diverso, posizionamento più premium (manutenzione e prezzo più alti di conseguenza). Una delle poche auto di tutta la lista comodamente sotto i 4,3m di lunghezza (4,17m).",
-    annuncio: { fonte: "Salone dell'Auto Vivarini, Padova — importo non estratto dalla ricerca", prezzo: "~30.500€ (stima)", url: "https://www.automobile.it/alfa_romeo-junior-padova" },
+    nota: "Prezzo aggiornato con annuncio reale in Veneto (Villorba, TV): km0, 5km, promo attiva fino al 31/08/2026 (listino pieno 32.950€) — verifica se la promo è ancora valida quando la guardi tu. Condivide la piattaforma CMP con Fiat 600, Jeep Avenger e Peugeot 2008/208: stessa base tecnica, brand diverso, posizionamento più premium (manutenzione più alta di conseguenza). Una delle poche auto di tutta la lista comodamente sotto i 4,3m (4,17m).",
+    annuncio: { fonte: "AutoUncle, Villorba (TV)", prezzo: "27.950€", url: "https://www.autouncle.it/it/auto-usate/Alfa%20Romeo/GT%20Junior/in/Veneto" },
   },
   {
     id: "avenger", nome: "Jeep Avenger Hybrid", gruppo: "Mild hybrid", carrozzeria: "SUV",
     allestimenti: [
-      { nome: "1.2 110cv mild hybrid e-DCT (stima)", prezzo: 24500 },
+      { nome: "1.2 Turbo 110cv MHEV Longitude automatico (km0)", prezzo: 22700 },
     ],
     wltp: 18.9, kw: 81, lunghezza: 4.084, bagagliaio: 355, bagagliaioMax: 1050,
     manutenzione: 280, tech: 7, valoreResiduoPct: 0.35, scarto: 0.18,
     ncapStelle: 5, ncapAnno: 2023,
     garanzia: "2 anni km illimitati (standard UE).",
-    nota: "Prezzo stimato: 26 annunci trovati a Padova ma nessuno con importo esplicito estratto dalla ricerca — verifica prima di contare sul dato. Stessa piattaforma CMP di Fiat 600/Alfa Junior/Peugeot 2008. Eletta Auto dell'Anno in Europa 2023.",
-    annuncio: { fonte: "AutoSuperMarket, Padova — importo non estratto dalla ricerca", prezzo: "~24.500€ (stima)", url: "https://autosupermarket.it/auto-usate/jeep/avenger/in-provincia-di-padova" },
+    nota: "Prezzo aggiornato con annuncio reale a Padova (provincia): km0, 10km, cambio automatico confermato. Stessa piattaforma CMP di Fiat 600/Alfa Junior/Peugeot 2008. Eletta Auto dell'Anno in Europa 2023.",
+    annuncio: { fonte: "AutoUncle/Caraffinity, provincia di Padova", prezzo: "22.700€", url: "https://www.autouncle.it/it/auto-usate/Jeep/Avenger/in/Veneto" },
   },
 ];
 
@@ -993,7 +994,8 @@ export default function App() {
             <li><strong>Bollo</strong>: Veneto, esente i primi {assumptions.exemptYears} anni per le ibride, poi due fasce (fino e oltre 100kW). Alcune fonti citano tariffe leggermente diverse — verifica su infobollo.regione.veneto.it prima di decidere.</li>
             <li><strong>Incentivi statali</strong>: non inclusi. A fine luglio 2026 il MIMIT non ha confermato un ecobonus generalizzato 2026 per benzina/ibride non plug-in senza rottamazione.</li>
             <li><strong>Euro NCAP</strong>: le stelle da sole non bastano — un test di più di 6 anni (Suzuki Vitara 2015, Kia Stonic 2017) non riflette gli standard di sicurezza attuali, anche se il punteggio ufficiale resta quello.</li>
-            <li>Prezzi verificati su annunci reali entro 200km da Padova (o nazionali, dove specificato) per 26 dei {MODELS.length} modelli. Dati più deboli su Fiat 600, C3 Aircross, Mokka, Cupra Formentor, GWM Ora 5, MG ZS Hybrid+, Ford Focus Estate, Kia Ceed Sportswagon, Mazda CX-30, Seat Ibiza, Alfa Romeo Junior e Jeep Avenger — vedi la nota su ciascuna card. Ricontrolla comunque prima di un acquisto: gli annunci usati cambiano nel giro di poche settimane.</li>
+            <li>Prezzi verificati su annunci reali entro 200km da Padova (o in Veneto/nazionali, dove specificato) per 31 dei {MODELS.length} modelli, dopo un secondo giro di verifica mirato. Restano stime di listino non ancora verificate su Fiat 600, C3 Aircross, Mokka, Cupra Formentor, GWM Ora 5, MG ZS Hybrid+ e Kia Ceed Sportswagon — vedi la nota su ciascuna card.</li>
+            <li><strong>Scoperta di questo giro</strong>: la Ford Focus Estate EcoBoost Hybrid si trova quasi solo con cambio manuale sul mercato reale — le uniche automatiche trovate erano diesel EcoBlue, non benzina/ibride. Se il cambio automatico è un requisito fermo per te, questo modello è più a rischio degli altri.</li>
             <li><strong>Mitsubishi non incluso</strong>: l'ASX venduto oggi in Italia è tecnicamente la stessa auto della Renault Captur E-Tech (accordo di rebadging tra le due case) — già presente in lista, aggiungerla di nuovo sarebbe stato un doppione con un altro nome.</li>
             <li><strong>Pattern Dacia</strong>: sia la Duster (3 stelle, 2024) sia la Jogger (3 stelle, 2022) hanno punteggi Euro NCAP nettamente più bassi della media della lista, mentre la Sandero (2 stelle, 2021) è la più bassa di tutte — un trade-off prezzo/sicurezza sistematico del marchio, non un errore di dati.</li>
             <li><strong>Lacune reali dichiarate</strong>: Renault e MG non vendono wagon a benzina/ibrida in Italia (solo elettriche); Ford non ha più una berlina/compatta economica dal 2023; Skoda non ha più una wagon in questo segmento dalla 4ª generazione Fabia (2021) — l'unica wagon Skoda rimasta (Octavia) è di segmento superiore e non ancora verificata; Peugeot 308 SW non verificata in questa sessione. Nessuna di queste è una dimenticanza: il modello semplicemente non esiste o non è stato ancora controllato.</li>
