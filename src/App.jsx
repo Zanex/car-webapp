@@ -16,7 +16,7 @@ import {
 
 const MODELS = [
   {
-    id: "yaris-cross", nome: "Toyota Yaris Cross Hybrid", gruppo: "Full hybrid",
+    id: "yaris-cross", nome: "Toyota Yaris Cross Hybrid", gruppo: "Full hybrid", carrozzeria: "SUV",
     allestimenti: [
       { nome: "Business", prezzo: 20800 },
       { nome: "Trend", prezzo: 22900 },
@@ -29,7 +29,7 @@ const MODELS = [
     annuncio: { fonte: "AutoScout24, entro 200km da Padova", prezzo: "20.800–24.400€", url: "https://www.autoscout24.it/lst/toyota/yaris-cross/cit_padova" },
   },
   {
-    id: "mg3", nome: "MG3 Hybrid+", gruppo: "Full hybrid",
+    id: "mg3", nome: "MG3 Hybrid+", gruppo: "Full hybrid", carrozzeria: "Berlina",
     allestimenti: [
       { nome: "Luxury (usato, 16-20.000km)", prezzo: 15450 },
       { nome: "Comfort (km0)", prezzo: 18490 },
@@ -43,7 +43,7 @@ const MODELS = [
     annuncio: { fonte: "AutoScout24, varie sedi", prezzo: "14.900–18.490€", url: "https://www.autoscout24.it/lst/mg/mg3" },
   },
   {
-    id: "captur", nome: "Renault Captur E-Tech Full Hybrid", gruppo: "Full hybrid",
+    id: "captur", nome: "Renault Captur E-Tech Full Hybrid", gruppo: "Full hybrid", carrozzeria: "SUV",
     allestimenti: [
       { nome: "Techno 145cv (usato)", prezzo: 18900 },
       { nome: "Evolution 160cv (km0/promo)", prezzo: 24900 },
@@ -56,7 +56,7 @@ const MODELS = [
     annuncio: { fonte: "Autobase Renault, Padova/Albignasego (145cv full hybrid)", prezzo: "18.750–19.390€", url: "https://autobase.concessionaria.renault.it/auto/usate/padova/renault/captur/" },
   },
   {
-    id: "puma", nome: "Ford Puma EcoBoost Hybrid (automatico)", gruppo: "Mild hybrid",
+    id: "puma", nome: "Ford Puma EcoBoost Hybrid (automatico)", gruppo: "Mild hybrid", carrozzeria: "SUV",
     allestimenti: [
       { nome: "ST-Line X 125cv automatico", prezzo: 18500 },
     ],
@@ -68,7 +68,7 @@ const MODELS = [
     annuncio: { fonte: "AutoUncle/AutoScout24, zona Padova (ST-Line X 125CV automatico)", prezzo: "18.400–18.500€", url: "https://www.autouncle.it/it/auto-usate/Ford/Puma/in/Veneto/Padua" },
   },
   {
-    id: "vitara", nome: "Suzuki Vitara Full Hybrid (automatico)", gruppo: "Full hybrid",
+    id: "vitara", nome: "Suzuki Vitara Full Hybrid (automatico)", gruppo: "Full hybrid", carrozzeria: "SUV",
     allestimenti: [
       { nome: "140CV automatico", prezzo: 19500 },
     ],
@@ -79,7 +79,7 @@ const MODELS = [
     annuncio: { fonte: "AutoScout24 (140CV, 2022)", prezzo: "18.500–19.500€", url: "https://www.autoscout24.it/lst/suzuki/vitara/ve_full-hybrid" },
   },
   {
-    id: "stonic", nome: "Kia Stonic Mild Hybrid (automatico)", gruppo: "Mild hybrid",
+    id: "stonic", nome: "Kia Stonic Mild Hybrid (automatico)", gruppo: "Mild hybrid", carrozzeria: "SUV",
     allestimenti: [
       { nome: "GT-Line 120cv automatico", prezzo: 18000 },
     ],
@@ -90,7 +90,7 @@ const MODELS = [
     annuncio: { fonte: "AutoScout24 (GT-Line 120CV, lug.2024, 12.000km, Padova)", prezzo: "18.000€", url: "https://www.autoscout24.it/lst/kia/stonic/padova" },
   },
   {
-    id: "bayon", nome: "Hyundai Bayon Mild Hybrid (automatico)", gruppo: "Mild hybrid",
+    id: "bayon", nome: "Hyundai Bayon Mild Hybrid (automatico)", gruppo: "Mild hybrid", carrozzeria: "SUV",
     allestimenti: [
       { nome: "XClass DCT", prezzo: 17400 },
     ],
@@ -102,7 +102,7 @@ const MODELS = [
     annuncio: { fonte: "alVolante, Padova (XClass DCT, dic.2023, 35.000km)", prezzo: "17.400€", url: "https://annunci.alvolante.it/auto-usate/hyundai-padova" },
   },
   {
-    id: "tcross", nome: "VW T-Cross 1.0 TSI DSG", gruppo: "Benzina",
+    id: "tcross", nome: "VW T-Cross 1.0 TSI DSG", gruppo: "Benzina", carrozzeria: "SUV",
     allestimenti: [
       { nome: "Style 110cv DSG", prezzo: 18990 },
       { nome: "Life 115cv DSG", prezzo: 23000 },
@@ -115,7 +115,7 @@ const MODELS = [
     annuncio: { fonte: "alVolante, Padova (115CV DSG)", prezzo: "22.490–23.590€", url: "https://annunci.alvolante.it/auto-usate/volkswagen-t-cross-padova" },
   },
   {
-    id: "taigo", nome: "VW Taigo 1.0 TSI 115 DSG", gruppo: "Benzina",
+    id: "taigo", nome: "VW Taigo 1.0 TSI 115 DSG", gruppo: "Benzina", carrozzeria: "SUV",
     allestimenti: [
       { nome: "R-Line 110cv", prezzo: 25400 },
     ],
@@ -126,7 +126,7 @@ const MODELS = [
     annuncio: { fonte: "De Bona Motors, Padova (R-Line 110CV)", prezzo: "25.400€", url: "https://www.debona.it" },
   },
   {
-    id: "kamiq", nome: "Skoda Kamiq 1.0 TSI 110 DSG", gruppo: "Benzina",
+    id: "kamiq", nome: "Skoda Kamiq 1.0 TSI 110 DSG", gruppo: "Benzina", carrozzeria: "SUV",
     allestimenti: [
       { nome: "Ambition 110cv DSG", prezzo: 18200 },
     ],
@@ -138,7 +138,7 @@ const MODELS = [
     annuncio: { fonte: "AutoScout24 (Ambition, 2023, 21.800km)", prezzo: "18.200€", url: "https://www.autoscout24.it/lst/skoda/kamiq" },
   },
   {
-    id: "2008", nome: "Peugeot 2008 Hybrid 136 e-DCS6", gruppo: "Mild hybrid",
+    id: "2008", nome: "Peugeot 2008 Hybrid 136 e-DCS6", gruppo: "Mild hybrid", carrozzeria: "SUV",
     allestimenti: [
       { nome: "Allure 136cv", prezzo: 22400 },
       { nome: "GT 136cv", prezzo: 24000 },
@@ -152,7 +152,7 @@ const MODELS = [
     annuncio: { fonte: "Ghiraldo & Autoin, Padova (2023, 10.500km)", prezzo: "22.400–27.800€", url: "https://www.ghiraldo-autoin.it/auto/usate/padova/peugeot/2008/" },
   },
   {
-    id: "qashqai", nome: "Nissan Qashqai e-Power", gruppo: "e-Power",
+    id: "qashqai", nome: "Nissan Qashqai e-Power", gruppo: "e-Power", carrozzeria: "SUV",
     allestimenti: [
       { nome: "N-Connecta 140cv (km0)", prezzo: 25900 },
       { nome: "Tekna 140cv (km0)", prezzo: 30900 },
@@ -165,7 +165,7 @@ const MODELS = [
     annuncio: { fonte: "AutoScout24/Campello Motors, Veneto (km0 140CV)", prezzo: "25.900–30.900€", url: "https://www.autoscout24.it/lst/nissan/qashqai/padova" },
   },
   {
-    id: "yaris", nome: "Toyota Yaris Hybrid", gruppo: "Full hybrid",
+    id: "yaris", nome: "Toyota Yaris Hybrid", gruppo: "Full hybrid", carrozzeria: "Berlina",
     allestimenti: [
       { nome: "Hybrid 115cv", prezzo: 16500 },
       { nome: "Hybrid 130cv", prezzo: 18500 },
@@ -178,7 +178,7 @@ const MODELS = [
     annuncio: { fonte: "AutoScout24 (116CV, 06/2022, 93.751km)", prezzo: "16.490€", url: "https://www.autoscout24.it/lst/toyota/yaris/ve_hybrid" },
   },
   {
-    id: "fiat600", nome: "Fiat 600 Hybrid", gruppo: "Mild hybrid",
+    id: "fiat600", nome: "Fiat 600 Hybrid", gruppo: "Mild hybrid", carrozzeria: "SUV",
     allestimenti: [
       { nome: "Hybrid 110cv", prezzo: 17500 },
       { nome: "Hybrid 145cv / La Prima", prezzo: 22000 },
@@ -191,7 +191,7 @@ const MODELS = [
     annuncio: { fonte: "AutoScout24, varie sedi (usato nazionale)", prezzo: "17.490–18.950€", url: "https://www.autoscout24.it/auto/fiat/fiat-600/" },
   },
   {
-    id: "c3aircross", nome: "Citroën C3 Aircross Hybrid 136", gruppo: "Mild hybrid",
+    id: "c3aircross", nome: "Citroën C3 Aircross Hybrid 136", gruppo: "Mild hybrid", carrozzeria: "SUV",
     allestimenti: [
       { nome: "Hybrid 136cv (nuovo)", prezzo: 24790 },
     ],
@@ -203,7 +203,7 @@ const MODELS = [
     annuncio: { fonte: "Listino ufficiale Citroën (Hybrid 136cv nuovo)", prezzo: "24.790€", url: "https://www.autoscout24.it/auto/citroen/citroen-c3/citroen-c3-aircross/" },
   },
   {
-    id: "mokka", nome: "Opel Mokka Hybrid", gruppo: "Mild hybrid",
+    id: "mokka", nome: "Opel Mokka Hybrid", gruppo: "Mild hybrid", carrozzeria: "SUV",
     allestimenti: [
       { nome: "Hybrid 145cv GS automatico", prezzo: 22500 },
     ],
@@ -215,7 +215,7 @@ const MODELS = [
     annuncio: { fonte: "Range di mercato Veneto (AutoUncle) — nessun singolo annuncio esatto verificato", prezzo: "~22.500€ (stima supportata)", url: "https://www.autouncle.it/it/auto-usate/Opel/Mokka/in/Veneto" },
   },
   {
-    id: "jazz", nome: "Honda Jazz e:HEV", gruppo: "Full hybrid",
+    id: "jazz", nome: "Honda Jazz e:HEV", gruppo: "Full hybrid", carrozzeria: "Berlina",
     allestimenti: [
       { nome: "Elegance (km0, 107cv)", prezzo: 21840 },
       { nome: "Comfort (usato 2020, 68.800km)", prezzo: 13800 },
@@ -228,7 +228,7 @@ const MODELS = [
     annuncio: { fonte: "AutoScout24/AutoUncle, Padova/Albignasego e Veneto", prezzo: "13.800–22.800€", url: "https://www.autouncle.it/it/auto-usate/Honda/Jazz/in/Veneto" },
   },
   {
-    id: "formentor", nome: "Cupra Formentor 1.5 TSI Mild Hybrid", gruppo: "Mild hybrid",
+    id: "formentor", nome: "Cupra Formentor 1.5 TSI Mild Hybrid", gruppo: "Mild hybrid", carrozzeria: "SUV",
     allestimenti: [
       { nome: "1.5 TSI 150cv DSG (usato)", prezzo: 28000 },
     ],
@@ -238,6 +238,276 @@ const MODELS = [
     garanzia: "2 anni km illimitati (standard UE, gruppo Volkswagen).",
     nota: "ATTENZIONE: è l'unico modello dell'intera gamma Cupra sotto i 30.000€, ma è lungo 4,45m — 15cm oltre il tuo limite garage, il divario più ampio di tutta la lista (peggio della Qashqai). Nessun modello Cupra attuale entra nei 4,3m: Leon 4,37m, Born (elettrica) 4,32m. Bagagliaio e stelle NCAP stimati con confidenza moderata, non verificati con una fonte diretta in questa sessione. Prezzo usato al limite del tuo budget: verifica bene cosa include prima di considerarla.",
     annuncio: { fonte: "Subito.it, Padova/Veneto (1.5 TSI usato)", prezzo: "25.900–30.990€", url: "https://www.subito.it/annunci-italia/vendita/auto/cupra/formentor/ibrida/" },
+  },
+  {
+    id: "ora5", nome: "GWM Ora 5 Hi2 Full Hybrid", gruppo: "Full hybrid", carrozzeria: "SUV",
+    allestimenti: [
+      { nome: "Origin Hi2 (nuovo)", prezzo: 28600 },
+      { nome: "Premium Hi2 (promo lancio, scad. 31/08/2026)", prezzo: 26950 },
+    ],
+    wltp: 19.6, kw: 164, lunghezza: 4.471, bagagliaio: 390, bagagliaioMax: 1088,
+    manutenzione: 280, tech: 8, valoreResiduoPct: 0.28, scarto: 0.15,
+    ncapStelle: null, ncapAnno: null, ncapNonTestata: true,
+    garanzia: "7 anni/150.000km su tutte le motorizzazioni. Batteria: 8 anni/160.000km. 3 anni di manutenzione ordinaria inclusi con la promo di lancio.",
+    nota: "Marchio nuovo in Italia (vendite dal giugno 2026): nessuno storico di affidabilità o tenuta del valore residuo, la stima è quindi più incerta del solito — trattala come tale. Non risulta ancora testata da Euro NCAP (modello troppo recente). Lunga 4,471m: 17cm oltre il tuo limite garage. 223CV complessivi, cambio automatico, ADAS di serie molto completo (23 funzioni), CarPlay/Android Auto wireless. Il prezzo Premium a 26.950€ è una promozione a tempo (fino al 31/08/2026 secondo le fonti trovate) — verifica se è ancora attiva prima di contarci.",
+    annuncio: { fonte: "Listino ufficiale GWM Italia (giugno 2026)", prezzo: "26.950–30.600€", url: "https://www.gwm-eu.com/it/news-list/2026/gwm_ora_5" },
+  },
+  {
+    id: "corolla-ts", nome: "Toyota Corolla Touring Sports Hybrid", gruppo: "Full hybrid", carrozzeria: "Wagon",
+    allestimenti: [
+      { nome: "Active 1.8 (usato 2023, 128.000km)", prezzo: 18950 },
+      { nome: "140cv automatico (km0/quasi nuovo)", prezzo: 29500 },
+    ],
+    wltp: 22.5, kw: 103, lunghezza: 4.66, bagagliaio: 581, bagagliaioMax: 1606,
+    manutenzione: 280, tech: 8, valoreResiduoPct: 0.45, scarto: 0.10,
+    ncapStelle: 5, ncapAnno: 2018,
+    garanzia: "3 anni/100.000km, estensibile a 5 con tagliandi Toyota. Batteria ibrida: 10 anni con controllo annuale.",
+    nota: "È il segmento C, non B: 4,66m, 48cm più lunga della Yaris Cross e con bagagliaio quasi doppio (581L base). L'unica wagon Toyota disponibile in questa fascia di prezzo — non esiste una wagon compatta come la Yaris. Entrambi gli annunci reali trovati a Padova (Ferri Auto Limena, Formulauto).",
+    annuncio: { fonte: "Ferri Auto/Formulauto, Padova (Limena)", prezzo: "18.950–29.500€", url: "https://www.ferriauto.com/ricerca-auto/usate/toyota/corolla-touring-sports" },
+  },
+  {
+    id: "mgzs", nome: "MG ZS Hybrid+", gruppo: "Full hybrid", carrozzeria: "SUV",
+    allestimenti: [
+      { nome: "Comfort (nuovo)", prezzo: 25490 },
+    ],
+    wltp: 22.7, kw: 100, lunghezza: 4.43, bagagliaio: 443, bagagliaioMax: 1166,
+    manutenzione: 230, tech: 6, valoreResiduoPct: 0.25, scarto: 0.10,
+    ncapStelle: 3, ncapAnno: 2017,
+    garanzia: "7 anni/150.000km — tra le più lunghe del mercato.",
+    nota: "ATTENZIONE lunghezza: 4,43m, 13cm oltre il tuo limite garage. ATTENZIONE sicurezza: le 3 stelle mostrate sono del test 2017 sulla generazione precedente — la nuova versione ha il passo allungato di 30cm e condivide lo schema ibrido della MG3, ma non risulta un retest Euro NCAP specifico trovato in questa sessione: il dato è probabilmente superato, non affidabile per la generazione attuale. Bagagliaio stimato con confidenza moderata. Prezzo di listino nuovo, nessun usato verificato.",
+    annuncio: { fonte: "Listino ufficiale MG Italia", prezzo: "25.490€", url: "https://www.mgmotor.it" },
+  },
+  {
+    id: "clio", nome: "Renault Clio TCe", gruppo: "Benzina", carrozzeria: "Berlina",
+    allestimenti: [
+      { nome: "TCe 115 Evolution (nuovo)", prezzo: 18900 },
+    ],
+    wltp: 18.9, kw: 85, lunghezza: 4.05, bagagliaio: 391, bagagliaioMax: 1069,
+    manutenzione: 250, tech: 7, valoreResiduoPct: 0.35, scarto: 0.20,
+    ncapStelle: 5, ncapAnno: 2019,
+    garanzia: "2 anni km illimitati (standard UE).",
+    nota: "NON è una vera berlina: Renault non vende berline compatte in Italia, la Clio (5 porte) è il sostituto più vicino. Esiste anche una versione E-Tech Full Hybrid 145cv, non prezzata in questa sessione — se ti interessa il full hybrid invece del benzina puro, dimmelo e la verifico. Prezzo di listino nuovo, nessun usato verificato in questa sessione.",
+    annuncio: { fonte: "Listino ufficiale Renault Italia", prezzo: "18.900€", url: "https://www.renault.it/veicoli/nuove-vetture/clio.html" },
+  },
+  {
+    id: "focus-sw", nome: "Ford Focus Estate EcoBoost Hybrid", gruppo: "Mild hybrid", carrozzeria: "Wagon",
+    allestimenti: [
+      { nome: "125cv mHEV automatico (usato, stima)", prezzo: 19500 },
+    ],
+    wltp: 18.9, kw: 92, lunghezza: 4.65, bagagliaio: 575, bagagliaioMax: 1620,
+    manutenzione: 270, tech: 6, valoreResiduoPct: 0.30, scarto: 0.20,
+    ncapStelle: 5, ncapAnno: 2018,
+    garanzia: "3 anni/100.000km (2+1).",
+    nota: "Produzione terminata a novembre 2025: oggi si trova solo usata, nessun nuovo/km0 possibile. Prezzo stimato per analogia con la Puma (stesso propulsore) — non ho trovato un annuncio specifico con prezzo esplicito in questa sessione, solo conferma che il mercato dell'usato a Padova esiste. Verifica un prezzo reale prima di fidartene.",
+    annuncio: { fonte: "Quattroruote/Subito, Padova — nessun prezzo specifico verificato", prezzo: "~19.500€ (stima)", url: "https://www.quattroruote.it/auto-usate/annunci/marca-ford/modello-focus/regione-veneto/provincia-padova" },
+  },
+  {
+    id: "swift", nome: "Suzuki Swift Mild Hybrid", gruppo: "Mild hybrid", carrozzeria: "Berlina",
+    allestimenti: [
+      { nome: "83cv (usato 2021)", prezzo: 13499 },
+      { nome: "82cv (km0/nuovo)", prezzo: 16950 },
+    ],
+    wltp: 21.0, kw: 61, lunghezza: 3.86, bagagliaio: 265, bagagliaioMax: 589,
+    manutenzione: 200, tech: 5, valoreResiduoPct: 0.35, scarto: 0.20,
+    ncapStelle: null, ncapAnno: null, ncapNonTestata: true,
+    garanzia: "3 anni/100.000km, estensibile a 5.",
+    nota: "NON è una vera berlina: Suzuki non vende berline in Italia, la Swift (5 porte) è il sostituto più vicino, ed è anche l'auto più piccola e più economica di tutta la lista. Stelle Euro NCAP della generazione attuale non trovate con una fonte diretta in questa sessione — non presumere un buon punteggio solo perché altri modelli Suzuki lo hanno.",
+    annuncio: { fonte: "AutoScout24, Padova e nazionale", prezzo: "13.499–16.950€", url: "https://www.autoscout24.it/lst/suzuki/swift/padova" },
+  },
+  {
+    id: "i30-wagon", nome: "Hyundai i30 Wagon Mild Hybrid", gruppo: "Mild hybrid", carrozzeria: "Wagon",
+    allestimenti: [
+      { nome: "1.0 T-GDI 48V DCT (usato, praticamente nuovo)", prezzo: 17850 },
+    ],
+    wltp: 18.5, kw: 74, lunghezza: 4.585, bagagliaio: 602, bagagliaioMax: 1650,
+    manutenzione: 250, tech: 6, valoreResiduoPct: 0.35, scarto: 0.20,
+    ncapStelle: 5, ncapAnno: 2017,
+    garanzia: "5 anni km illimitati.",
+    nota: "Segmento C, non B: 4,585m, con un bagagliaio enorme (602L base, tra i più capienti di tutta la lista). Le 5 stelle mostrate sono del test 2017 sulla generazione originale, non ho trovato conferma di un retest sul facelift attuale — trattalo con cautela se la sicurezza pesa molto per te. Annuncio reale trovato: prezzo eccellente per un'auto praticamente a chilometro zero (100km, gennaio 2023).",
+    annuncio: { fonte: "AutoScout24, nazionale (100km, 01/2023)", prezzo: "17.850€", url: "https://www.autoscout24.it/lst/hyundai/i30/ve_wagon" },
+  },
+  {
+    id: "ceed-sw", nome: "Kia Ceed Sportswagon Mild Hybrid", gruppo: "Mild hybrid", carrozzeria: "Wagon",
+    allestimenti: [
+      { nome: "1.5 T-GDi MHEV DCT 140cv (nuovo)", prezzo: 33100 },
+    ],
+    wltp: 16.7, kw: 103, lunghezza: 4.60, bagagliaio: 625, bagagliaioMax: 1694,
+    manutenzione: 260, tech: 6, valoreResiduoPct: 0.35, scarto: 0.20,
+    ncapStelle: 4, ncapAnno: 2019,
+    garanzia: "7 anni/150.000km — tra le più lunghe del mercato.",
+    nota: "Prezzo di listino nuovo: 33.100€, sopra il tuo budget attuale di 30k (il semaforo prezzo la segnerà rossa finché non alzi la soglia budget nelle Assunzioni, o finché non trovi un usato più economico). Nessun annuncio usato verificato in questa sessione. Bagagliaio tra i più capienti della lista (625L base).",
+    annuncio: { fonte: "Listino ufficiale Kia Italia — nessun usato verificato", prezzo: "33.100€", url: "https://www.alvolante.it/listino_auto/kia-ceed_sportswagon" },
+  },
+  {
+    id: "golf", nome: "Volkswagen Golf eTSI Mild Hybrid", gruppo: "Mild hybrid", carrozzeria: "Berlina",
+    allestimenti: [
+      { nome: "Edition Plus DSG (km0)", prezzo: 25900 },
+      { nome: "Style DSG (km0)", prezzo: 29500 },
+    ],
+    wltp: 19.4, kw: 85, lunghezza: 4.28, bagagliaio: 381, bagagliaioMax: 1237,
+    manutenzione: 290, tech: 7, valoreResiduoPct: 0.42, scarto: 0.18,
+    ncapStelle: 5, ncapAnno: 2019,
+    garanzia: "2 anni km illimitati (standard UE).",
+    nota: "NON è una vera berlina: VW non vende berline compatte in Italia (la Virtus/Jetta esistono solo fuori Europa), la Golf 5 porte è il sostituto più vicino. Entrambi gli annunci sono km0 reali a Padova (Superauto).",
+    annuncio: { fonte: "Superauto SpA, Padova (km0)", prezzo: "25.900–29.500€", url: "https://www.superautospa.it/auto/tutte-tipologie/padova/volkswagen/golf/" },
+  },
+  {
+    id: "golf-variant", nome: "Volkswagen Golf Variant eTSI Mild Hybrid", gruppo: "Mild hybrid", carrozzeria: "Wagon",
+    allestimenti: [
+      { nome: "eTSI automatico 116cv (km0)", prezzo: 33200 },
+    ],
+    wltp: 19.0, kw: 85, lunghezza: 4.63, bagagliaio: 611, bagagliaioMax: 1642,
+    manutenzione: 300, tech: 7, valoreResiduoPct: 0.40, scarto: 0.18,
+    ncapStelle: 5, ncapAnno: 2019,
+    garanzia: "2 anni km illimitati (standard UE).",
+    nota: "Prezzo sopra budget (33.200€) — annuncio reale km0 trovato in Lombardia, non a Padova specificamente, nessun usato più economico verificato in questa sessione.",
+    annuncio: { fonte: "AutoScout24, Lombardia (km0, 10km)", prezzo: "33.200€", url: "https://www.autoscout24.it/lst/volkswagen/golf-variant/tr_automatico" },
+  },
+  {
+    id: "208", nome: "Peugeot 208 PureTech", gruppo: "Benzina", carrozzeria: "Berlina",
+    allestimenti: [
+      { nome: "PureTech 75 Active (nuovo, GPL)", prezzo: 11790 },
+      { nome: "PureTech 100 Allure (usato/promo)", prezzo: 13900 },
+    ],
+    wltp: 18.5, kw: 55, lunghezza: 4.06, bagagliaio: 311, bagagliaioMax: 1106,
+    manutenzione: 240, tech: 7, valoreResiduoPct: 0.32, scarto: 0.22,
+    ncapStelle: 5, ncapAnno: 2019,
+    garanzia: "2 anni km illimitati, estensibile a pagamento.",
+    nota: "NON è una vera berlina: Peugeot non vende berline compatte in Italia, la 208 (5 porte) è il sostituto più vicino. Cambio automatico non confermato su questi annunci specifici (molte 208 PureTech sono manuali) — verifica prima di contare sul dato. Prezzi reali trovati a Rubano (Padova).",
+    annuncio: { fonte: "usato.it, Rubano (Padova)", prezzo: "11.790–13.900€", url: "https://padova.usato.it/annunci/auto" },
+  },
+  {
+    id: "fabia", nome: "Skoda Fabia", gruppo: "Benzina", carrozzeria: "Berlina",
+    allestimenti: [
+      { nome: "1.0 MPI (usato, Padova)", prezzo: 14900 },
+    ],
+    wltp: 18.0, kw: 44, lunghezza: 4.11, bagagliaio: 380, bagagliaioMax: 1190,
+    manutenzione: 230, tech: 6, valoreResiduoPct: 0.35, scarto: 0.22,
+    ncapStelle: 4, ncapAnno: 2021,
+    garanzia: "2 anni km illimitati (standard UE).",
+    nota: "NON è una vera berlina: Skoda non vende berline compatte in Italia (la Slavia esiste in altri mercati, non confermata in Italia), la Fabia (5 porte) è il sostituto più vicino. NIENTE wagon Skoda in questo segmento: la Fabia Combi è stata eliminata dalla gamma dalla 4ª generazione (2021) in poi — l'unica wagon Skoda rimasta è la Octavia, un segmento più grande e non ancora verificata in questa sessione. Cambio automatico non confermato su questo annuncio specifico. Prezzo reale trovato a Padova (Superauto).",
+    annuncio: { fonte: "Superauto SpA, Padova", prezzo: "14.900€", url: "https://www.superautospa.it/auto/tutte-tipologie/padova/skoda/fabia/" },
+  },
+  {
+    id: "mazda2", nome: "Mazda2 Hybrid", gruppo: "Full hybrid", carrozzeria: "Berlina",
+    allestimenti: [
+      { nome: "1.5 Full Hybrid e-CVT", prezzo: 17900 },
+    ],
+    wltp: 24.0, kw: 85, lunghezza: 3.94, bagagliaio: 286, bagagliaioMax: 800,
+    manutenzione: 240, tech: 6, valoreResiduoPct: 0.38, scarto: 0.10,
+    ncapStelle: 4, ncapAnno: 2025,
+    garanzia: "3 anni/100.000km (rete Mazda, non ha il programma di estensione Toyota Relax).",
+    nota: "È letteralmente una Toyota Yaris ribadgeizzata: stesso motore 1.5 Full Hybrid, stesso cambio e-CVT, prodotta nello stesso stabilimento in accordo Mazda-Toyota — stessa lunghezza, stesso bagagliaio limitato della Yaris standard già in lista. Prezzo identico sia nuova (0km) sia usata (2023, 39.600km) negli annunci trovati: 17.900€ in entrambi i casi, segno di un listino fisso di rete più che di un vero mercato dell'usato.",
+    annuncio: { fonte: "Mazda Best Selection, nazionale", prezzo: "17.900€", url: "https://www.mazdabestselection.it/cerca-la-tua-mazda-usata/" },
+  },
+  {
+    id: "cx30", nome: "Mazda CX-30 Mild Hybrid", gruppo: "Mild hybrid", carrozzeria: "SUV",
+    allestimenti: [
+      { nome: "e-Skyactiv X 145cv MHEV (stima)", prezzo: 27000 },
+    ],
+    wltp: 17.5, kw: 107, lunghezza: 4.395, bagagliaio: 430, bagagliaioMax: 1406,
+    manutenzione: 290, tech: 7, valoreResiduoPct: 0.38, scarto: 0.15,
+    ncapStelle: 5, ncapAnno: 2019,
+    garanzia: "3 anni/100.000km.",
+    nota: "Lunga 4,395m — 9,5cm oltre il tuo limite garage. Prezzo stimato per deprezzamento da nuovo (~32-35.000€): non ho trovato un annuncio usato con importo esplicito in questa sessione, verifica prima di fidartene.",
+    annuncio: { fonte: "Nessun annuncio con prezzo esplicito verificato in questa sessione", prezzo: "~27.000€ (stima)", url: "https://www.autoscout24.it/lst/mazda/cx-30/ve_hybrid" },
+  },
+  {
+    id: "arona", nome: "Seat Arona", gruppo: "Benzina", carrozzeria: "SUV",
+    allestimenti: [
+      { nome: "1.0 EcoTSI 95cv (usato)", prezzo: 15800 },
+      { nome: "1.0 EcoTSI FR 110cv (km0)", prezzo: 19300 },
+    ],
+    wltp: 19.2, kw: 70, lunghezza: 4.138, bagagliaio: 400, bagagliaioMax: 1280,
+    manutenzione: 270, tech: 6, valoreResiduoPct: 0.35, scarto: 0.20,
+    ncapStelle: 4, ncapAnno: 2017,
+    garanzia: "2 anni km illimitati (standard UE).",
+    nota: "Nessuna versione ibrida disponibile per la Arona, solo benzina puro. Cambio automatico non confermato sugli annunci trovati (la maggior parte è manuale) — verifica prima di contare sul dato. Le 4 stelle mostrate sono del test 2017, probabilmente datato.",
+    annuncio: { fonte: "AutoUncle/De Bona, Padova e Veneto", prezzo: "15.800–19.300€", url: "https://www.autouncle.it/it/auto-usate/Seat/Arona/in/Veneto/Padua" },
+  },
+  {
+    id: "ibiza", nome: "Seat Ibiza", gruppo: "Benzina", carrozzeria: "Berlina",
+    allestimenti: [
+      { nome: "1.0 EcoTSI 95cv (stima)", prezzo: 15000 },
+    ],
+    wltp: 19.0, kw: 70, lunghezza: 4.059, bagagliaio: 355, bagagliaioMax: 1165,
+    manutenzione: 250, tech: 6, valoreResiduoPct: 0.32, scarto: 0.20,
+    ncapStelle: 4, ncapAnno: 2021,
+    garanzia: "2 anni km illimitati (standard UE).",
+    nota: "NON è una vera berlina: Seat non vende berline in Italia, la Ibiza (5 porte) è il sostituto più vicino. Prezzo stimato: l'unico annuncio reale trovato (13.700€, De Bona Padova) era un 1.6 TDI diesel, non benzina come richiesto — non l'ho usato per non mischiare alimentazioni diverse. Verifica un prezzo benzina reale prima di fidartene.",
+    annuncio: { fonte: "Nessun annuncio benzina verificato in questa sessione", prezzo: "~15.000€ (stima)", url: "https://www.autoscout24.it/lst/seat/ibiza/padova" },
+  },
+  {
+    id: "leon-st", nome: "Seat Leon Sportstourer", gruppo: "Benzina", carrozzeria: "Wagon",
+    allestimenti: [
+      { nome: "1.0 TSI 90cv (usato)", prezzo: 16400 },
+    ],
+    wltp: 18.9, kw: 66, lunghezza: 4.64, bagagliaio: 620, bagagliaioMax: 1600,
+    manutenzione: 290, tech: 7, valoreResiduoPct: 0.35, scarto: 0.20,
+    ncapStelle: 5, ncapAnno: 2020,
+    garanzia: "2 anni km illimitati (standard UE).",
+    nota: "Cambio manuale sull'annuncio trovato (il 90cv è tipicamente solo manuale) — la versione DSG automatica esiste su allestimenti superiori, non verificata in questa sessione. Bagagliaio molto capiente (620L base).",
+    annuncio: { fonte: "De Bona, Padova", prezzo: "16.400€", url: "https://www.debona.it/auto/usate/tutte-citta/seat/" },
+  },
+  {
+    id: "duster", nome: "Dacia Duster Eco-G", gruppo: "Benzina", carrozzeria: "SUV",
+    allestimenti: [
+      { nome: "1.2 Eco-G Journey 120cv automatico GPL (km0)", prezzo: 25490 },
+    ],
+    wltp: 15.4, kw: 88, lunghezza: 4.34, bagagliaio: 472, bagagliaioMax: 1614,
+    manutenzione: 260, tech: 6, valoreResiduoPct: 0.35, scarto: 0.20,
+    ncapStelle: 3, ncapAnno: 2024,
+    garanzia: "3 anni/100.000km, estensibile.",
+    nota: "Alimentazione GPL bi-fuel (Eco-G), non full hybrid — i consumi 'benzina' mostrati sono una stima equivalente, il costo reale al km col GPL è diverso (di solito più basso) da quello della benzina pura. Lunga 4,34m, appena sopra il tuo limite garage. Le 3 stelle Euro NCAP (test 2024 sulla generazione attuale) sono state molto discusse dalla stampa specializzata come deludenti per un SUV moderno — dato reale, non un errore.",
+    annuncio: { fonte: "Autobase Dacia, Padova/Albignasego (km0)", prezzo: "25.490€", url: "https://autobase.concessionaria.dacia.it/auto/usate/padova/dacia/" },
+  },
+  {
+    id: "jogger", nome: "Dacia Jogger Hybrid", gruppo: "Full hybrid", carrozzeria: "Wagon",
+    allestimenti: [
+      { nome: "1.6 Hybrid Extreme 140cv automatico (usato)", prezzo: 17490 },
+    ],
+    wltp: 20.4, kw: 103, lunghezza: 4.55, bagagliaio: 708, bagagliaioMax: 1819,
+    manutenzione: 240, tech: 6, valoreResiduoPct: 0.32, scarto: 0.15,
+    ncapStelle: 3, ncapAnno: 2022,
+    garanzia: "3 anni/100.000km.",
+    nota: "Tecnicamente una wagon/monovolume lunga (fino a 7 posti disponibili), non un SUV — bagagliaio il più grande di tutta la lista (708L base). Prezzo più basso di qualunque altra wagon full hybrid qui presente. Anche qui, come per la Duster, le 3 stelle NCAP sono un dato reale e discusso, non un errore — il posizionamento economico Dacia sembra avere un costo sistematico sulla sicurezza.",
+    annuncio: { fonte: "Autobase Dacia, Padova", prezzo: "17.490€", url: "https://autobase.concessionaria.renault.it/auto/tutte-tipologie/padova/dacia/" },
+  },
+  {
+    id: "sandero", nome: "Dacia Sandero Stepway", gruppo: "Benzina", carrozzeria: "Berlina",
+    allestimenti: [
+      { nome: "1.0 TCe Comfort (usato, manuale)", prezzo: 11990 },
+    ],
+    wltp: 18.0, kw: 67, lunghezza: 4.09, bagagliaio: 328, bagagliaioMax: 1108,
+    manutenzione: 200, tech: 4, valoreResiduoPct: 0.30, scarto: 0.20,
+    ncapStelle: 2, ncapAnno: 2021,
+    garanzia: "3 anni/100.000km.",
+    nota: "NON è una vera berlina, e nemmeno un'ibrida: è l'auto più economica di tutta la lista (11.990€), ma cambio manuale — nessun automatico trovato per la Sandero, potrebbe non esistere proprio in gamma. Le 2 stelle Euro NCAP (2021) sono le più basse di qualunque modello qui presente: un vero trade-off prezzo/sicurezza da conoscere, non solo un numero da ignorare per risparmiare.",
+    annuncio: { fonte: "Autobase Dacia, Padova/Limena", prezzo: "11.990€", url: "https://autobase.concessionaria.dacia.it/auto/usate/padova/dacia/" },
+  },
+  {
+    id: "junior", nome: "Alfa Romeo Junior Hybrid", gruppo: "Mild hybrid", carrozzeria: "SUV",
+    allestimenti: [
+      { nome: "1.2 145cv Hybrid eDCT6 Speciale (nuova da immatricolare, stima prezzo)", prezzo: 30500 },
+    ],
+    wltp: 18.2, kw: 107, lunghezza: 4.17, bagagliaio: 400, bagagliaioMax: 1280,
+    manutenzione: 310, tech: 8, valoreResiduoPct: 0.35, scarto: 0.18,
+    ncapStelle: 5, ncapAnno: 2024,
+    garanzia: "2 anni km illimitati (standard UE).",
+    nota: "Prezzo stimato: annuncio reale trovato a Padova (Salone dell'Auto Vivarini) ma senza l'importo esplicito nel risultato di ricerca — verifica prima di contare sul dato. Condivide la piattaforma CMP con Fiat 600, Jeep Avenger e Peugeot 2008/208: stessa base tecnica, brand diverso, posizionamento più premium (manutenzione e prezzo più alti di conseguenza). Una delle poche auto di tutta la lista comodamente sotto i 4,3m di lunghezza (4,17m).",
+    annuncio: { fonte: "Salone dell'Auto Vivarini, Padova — importo non estratto dalla ricerca", prezzo: "~30.500€ (stima)", url: "https://www.automobile.it/alfa_romeo-junior-padova" },
+  },
+  {
+    id: "avenger", nome: "Jeep Avenger Hybrid", gruppo: "Mild hybrid", carrozzeria: "SUV",
+    allestimenti: [
+      { nome: "1.2 110cv mild hybrid e-DCT (stima)", prezzo: 24500 },
+    ],
+    wltp: 18.9, kw: 81, lunghezza: 4.084, bagagliaio: 355, bagagliaioMax: 1050,
+    manutenzione: 280, tech: 7, valoreResiduoPct: 0.35, scarto: 0.18,
+    ncapStelle: 5, ncapAnno: 2023,
+    garanzia: "2 anni km illimitati (standard UE).",
+    nota: "Prezzo stimato: 26 annunci trovati a Padova ma nessuno con importo esplicito estratto dalla ricerca — verifica prima di contare sul dato. Stessa piattaforma CMP di Fiat 600/Alfa Junior/Peugeot 2008. Eletta Auto dell'Anno in Europa 2023.",
+    annuncio: { fonte: "AutoSuperMarket, Padova — importo non estratto dalla ricerca", prezzo: "~24.500€ (stima)", url: "https://autosupermarket.it/auto-usate/jeep/avenger/in-provincia-di-padova" },
   },
 ];
 
@@ -310,6 +580,7 @@ export default function App() {
   const [sortBy, setSortBy] = useState("punteggio");
   const [hideGarageFail, setHideGarageFail] = useState(false);
   const [hideBudgetFail, setHideBudgetFail] = useState(false);
+  const [carrozzeriaFilter, setCarrozzeriaFilter] = useState([]);
   const [selectedRadar, setSelectedRadar] = useState(["yaris-cross", "captur", "mg3"]);
   const [expanded, setExpanded] = useState(null);
   const [loaded, setLoaded] = useState(false);
@@ -332,6 +603,7 @@ export default function App() {
         if (f.sortBy) setSortBy(f.sortBy);
         if (typeof f.hideGarageFail === "boolean") setHideGarageFail(f.hideGarageFail);
         if (typeof f.hideBudgetFail === "boolean") setHideBudgetFail(f.hideBudgetFail);
+        if (Array.isArray(f.carrozzeriaFilter)) setCarrozzeriaFilter(f.carrozzeriaFilter);
       }
     } catch (e) {
       // primo utilizzo su questo browser, o dato corrotto — si riparte da zero
@@ -364,15 +636,17 @@ export default function App() {
     if (next.sortBy !== undefined) setSortBy(next.sortBy);
     if (next.hideGarageFail !== undefined) setHideGarageFail(next.hideGarageFail);
     if (next.hideBudgetFail !== undefined) setHideBudgetFail(next.hideBudgetFail);
+    if (next.carrozzeriaFilter !== undefined) setCarrozzeriaFilter(next.carrozzeriaFilter);
     try {
       const merged = {
         sortBy: next.sortBy ?? sortBy,
         hideGarageFail: next.hideGarageFail ?? hideGarageFail,
         hideBudgetFail: next.hideBudgetFail ?? hideBudgetFail,
+        carrozzeriaFilter: next.carrozzeriaFilter ?? carrozzeriaFilter,
       };
       localStorage.setItem("confronto-auto:filters", JSON.stringify(merged));
     } catch (e) {}
-  }, [sortBy, hideGarageFail, hideBudgetFail]);
+  }, [sortBy, hideGarageFail, hideBudgetFail, carrozzeriaFilter]);
 
   // ---- calcoli ----
   const computed = useMemo(() => {
@@ -422,8 +696,9 @@ export default function App() {
   const passesFilters = useCallback((m) => {
     if (hideGarageFail && !m.garageOk) return false;
     if (hideBudgetFail && !m.budgetOk) return false;
+    if (carrozzeriaFilter.length > 0 && !carrozzeriaFilter.includes(m.carrozzeria)) return false;
     return true;
-  }, [hideGarageFail, hideBudgetFail]);
+  }, [hideGarageFail, hideBudgetFail, carrozzeriaFilter]);
 
   const activeSort = SORT_OPTIONS.find((s) => s.id === sortBy) ?? SORT_OPTIONS[0];
 
@@ -616,6 +891,21 @@ export default function App() {
             >
               Nascondi fuori budget
             </button>
+            {["SUV", "Berlina", "Wagon"].map((c) => {
+              const active = carrozzeriaFilter.includes(c);
+              return (
+                <button
+                  key={c}
+                  onClick={() => {
+                    const next = active ? carrozzeriaFilter.filter((x) => x !== c) : [...carrozzeriaFilter, c];
+                    saveFilters({ carrozzeriaFilter: next });
+                  }}
+                  style={{ ...S.chip, ...(active ? S.chipActive : {}) }}
+                >
+                  {c}
+                </button>
+              );
+            })}
           </div>
 
           {(hideGarageFail || hideBudgetFail) && (() => {
@@ -703,7 +993,11 @@ export default function App() {
             <li><strong>Bollo</strong>: Veneto, esente i primi {assumptions.exemptYears} anni per le ibride, poi due fasce (fino e oltre 100kW). Alcune fonti citano tariffe leggermente diverse — verifica su infobollo.regione.veneto.it prima di decidere.</li>
             <li><strong>Incentivi statali</strong>: non inclusi. A fine luglio 2026 il MIMIT non ha confermato un ecobonus generalizzato 2026 per benzina/ibride non plug-in senza rottamazione.</li>
             <li><strong>Euro NCAP</strong>: le stelle da sole non bastano — un test di più di 6 anni (Suzuki Vitara 2015, Kia Stonic 2017) non riflette gli standard di sicurezza attuali, anche se il punteggio ufficiale resta quello.</li>
-            <li>Prezzi verificati su annunci reali entro 200km da Padova per 13 dei {MODELS.length} modelli (Honda Jazz incluso, con un annuncio km0 trovato proprio ad Albignasego). Dati più deboli su Fiat 600, C3 Aircross, Mokka (stelle NCAP non verificate con fonte diretta per i primi due; Fiat 600 non risulta testata affatto) e Cupra Formentor (bagagliaio/NCAP con confidenza moderata) — vedi la nota su ciascuna card. Ricontrolla comunque prima di un acquisto: gli annunci usati cambiano nel giro di poche settimane.</li>
+            <li>Prezzi verificati su annunci reali entro 200km da Padova (o nazionali, dove specificato) per 26 dei {MODELS.length} modelli. Dati più deboli su Fiat 600, C3 Aircross, Mokka, Cupra Formentor, GWM Ora 5, MG ZS Hybrid+, Ford Focus Estate, Kia Ceed Sportswagon, Mazda CX-30, Seat Ibiza, Alfa Romeo Junior e Jeep Avenger — vedi la nota su ciascuna card. Ricontrolla comunque prima di un acquisto: gli annunci usati cambiano nel giro di poche settimane.</li>
+            <li><strong>Mitsubishi non incluso</strong>: l'ASX venduto oggi in Italia è tecnicamente la stessa auto della Renault Captur E-Tech (accordo di rebadging tra le due case) — già presente in lista, aggiungerla di nuovo sarebbe stato un doppione con un altro nome.</li>
+            <li><strong>Pattern Dacia</strong>: sia la Duster (3 stelle, 2024) sia la Jogger (3 stelle, 2022) hanno punteggi Euro NCAP nettamente più bassi della media della lista, mentre la Sandero (2 stelle, 2021) è la più bassa di tutte — un trade-off prezzo/sicurezza sistematico del marchio, non un errore di dati.</li>
+            <li><strong>Lacune reali dichiarate</strong>: Renault e MG non vendono wagon a benzina/ibrida in Italia (solo elettriche); Ford non ha più una berlina/compatta economica dal 2023; Skoda non ha più una wagon in questo segmento dalla 4ª generazione Fabia (2021) — l'unica wagon Skoda rimasta (Octavia) è di segmento superiore e non ancora verificata; Peugeot 308 SW non verificata in questa sessione. Nessuna di queste è una dimenticanza: il modello semplicemente non esiste o non è stato ancora controllato.</li>
+            <li><strong>Carrozzeria (SUV/Berlina/Wagon)</strong>: la lista è in ricostruzione marca per marca — molte case automobilistiche non vendono più berline o station wagon compatte in Italia, quindi alcune caselle restano vuote per davvero, non per pigrizia della ricerca. Dove non esiste una vera berlina, uso la 5 porte più vicina e lo dichiaro nella nota del modello.</li>
             <li><strong>Bagagliaio a sedili abbattuti</strong>: confermato da fonti dirette per 9 modelli; per Captur E-Tech, Suzuki Vitara e Bayon è una stima proporzionale, segnalata nella card del modello.</li>
             <li><strong>Correzione Hyundai Bayon</strong>: il bagagliaio base è 321L, non 411L come inizialmente indicato — quel valore vale per la versione benzina pura, non per la mild hybrid che ha il modulo elettrico sotto il piano di carico.</li>
             <li><strong>Garanzia di fabbrica</strong>: mostrata per riferimento, ma per un'auto usata conta solo quella residua dalla data di immatricolazione — chiedi sempre il libretto di garanzia originale.</li>
@@ -978,6 +1272,7 @@ function ModelCard({ m, rank, expanded, onToggle, insurance, saveInsurance, assu
           <div style={S.cardTitleRow}>
             <span style={S.cardTitle}>{m.nome}</span>
             <span style={S.groupTag}>{m.gruppo}</span>
+            <span style={S.bodyTag}>{m.carrozzeria}</span>
             {!m.garageOk && <span style={S.badgeDanger}><Ruler size={11} /> Non entra</span>}
             {m.allerta && <span style={S.badgeDanger}><AlertTriangle size={11} /> Sicurezza</span>}
             {trackCount > 0 && <span style={S.badgeTrack}><ClipboardList size={11} /> {trackCount} annunci tracciati</span>}
@@ -1174,6 +1469,7 @@ const S = {
   cardTitleRow: { display: "flex", alignItems: "center", gap: 8, flexWrap: "wrap" },
   cardTitle: { fontSize: 14.5, fontWeight: 600, color: C.text },
   groupTag: { fontSize: 10.5, color: C.textFaint, border: `1px solid ${C.border}`, borderRadius: 5, padding: "1px 6px" },
+  bodyTag: { fontSize: 10.5, fontWeight: 600, color: C.accent, border: `1px solid rgba(232,169,59,0.35)`, background: "rgba(232,169,59,0.08)", borderRadius: 5, padding: "1px 6px" },
   badgeDanger: { display: "inline-flex", alignItems: "center", gap: 3, fontSize: 10.5, fontWeight: 600, color: C.danger, background: "rgba(239,124,110,0.12)", borderRadius: 5, padding: "2px 6px" },
   badgeTrack: { display: "inline-flex", alignItems: "center", gap: 3, fontSize: 10.5, fontWeight: 600, color: "#5FB8D6", background: "rgba(95,184,214,0.12)", borderRadius: 5, padding: "2px 6px" },
   cardMetaRow: { display: "flex", alignItems: "center", gap: 8, rowGap: 4, flexWrap: "wrap", fontSize: 12, color: C.textSecondary, marginTop: 4, fontFamily: "'JetBrains Mono', monospace" },
